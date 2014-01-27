@@ -1,3 +1,0 @@
-First player wins!
-Score: 500
-Games won: 50

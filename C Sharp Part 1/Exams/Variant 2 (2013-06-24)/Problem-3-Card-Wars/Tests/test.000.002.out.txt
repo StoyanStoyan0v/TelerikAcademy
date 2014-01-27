@@ -1,3 +1,0 @@
-Second player wins!
-Score: 36
-Games won: 1

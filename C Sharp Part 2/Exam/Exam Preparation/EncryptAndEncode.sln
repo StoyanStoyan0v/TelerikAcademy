@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.20827.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncryptAndEncode", "EncryptAndEncode\EncryptAndEncode.csproj", "{C8E4D2D2-9E9C-45BC-AC08-9B9D488A2321}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheyAreGreen", "TheyAreGreen\TheyAreGreen.csproj", "{F8EB6C43-D0FE-4906-B93C-4703493F4F26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trails3D", "Trails3D\Trails3D.csproj", "{63A6B1C4-8E9A-4404-B792-A5DFCE5F9AA0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C8E4D2D2-9E9C-45BC-AC08-9B9D488A2321}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8E4D2D2-9E9C-45BC-AC08-9B9D488A2321}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8E4D2D2-9E9C-45BC-AC08-9B9D488A2321}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8E4D2D2-9E9C-45BC-AC08-9B9D488A2321}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8EB6C43-D0FE-4906-B93C-4703493F4F26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8EB6C43-D0FE-4906-B93C-4703493F4F26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8EB6C43-D0FE-4906-B93C-4703493F4F26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8EB6C43-D0FE-4906-B93C-4703493F4F26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63A6B1C4-8E9A-4404-B792-A5DFCE5F9AA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63A6B1C4-8E9A-4404-B792-A5DFCE5F9AA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63A6B1C4-8E9A-4404-B792-A5DFCE5F9AA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63A6B1C4-8E9A-4404-B792-A5DFCE5F9AA0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

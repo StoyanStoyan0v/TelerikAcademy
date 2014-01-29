@@ -1,38 +1,57 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-class Program
+namespace TRES4Numbers
 {
-    static string ConvertToNum(ulong dec)
+    class Program
     {
-        StringBuilder num = new StringBuilder();
-        do
+        static int count = 0;
+        static int[,] matrix;
+
+        static void Main(string[] args)
         {
-            switch (dec % 9)
+            string dimensions = Console.ReadLine();
+            string[] actualDimensions = Console.ReadLine().Split(' ');
+            int n = int.Parse(actualDimensions[0])+1;
+            int m = int.Parse(actualDimensions[1])+1;
+            matrix = new int[n, m];
+
+            int x = int.Parse(Console.ReadLine());
+            for (int i = 0; i < x; i++)
             {
-                case 0: num.Append("+NOL"); break;
-                case 1: num.Append("-KV"); break;
-                case 2: num.Append("DACA*"); break;
-                case 3: num.Append("MIM^"); break;
-                case 4: num.Append("|KIRE"); break;
-                case 5: num.Append("&YES"); break;
-                case 6: num.Append(">>YME"); break;
-                case 7: num.Append("LET/"); break;
-                case 8: num.Append("NOD<<"); break;
+                string[] line = Console.ReadLine().Split(' ');
+                if(int.Parse(line[0])<matrix.GetLength(0) && int.Parse(line[1])<matrix.GetLength(1))
+                matrix[int.Parse(line[0]), int.Parse(line[1])] = 1;
             }
-            dec /= 9;
+
+            GetPath(0, 0);
+            Console.WriteLine(count);
+
         }
-        while (dec != 0);
 
-        char[] numAsChars = num.ToString().ToCharArray();
-        Array.Reverse(numAsChars);
-        return new string(numAsChars);
-    }       
-
-    static void Main(string[] args)
-    {
-        ulong dec = ulong.Parse(Console.ReadLine());
-        Console.WriteLine(ConvertToNum(dec));
+        private static void GetPath(int row, int col)
+        {
+            if (row == matrix.GetLength(0)-1 && col == matrix.GetLength(1)-1)
+            {
+                count++;
+                return;
+            }   
+            else if(row>matrix.GetLength(0)-1||col>matrix.GetLength(1)-1 )
+            {
+                return;
+            }
+            else if(matrix[row,col]==1)
+            {
+                return;
+            }
+            else
+            {
+                GetPath(row + 1, col);
+                GetPath(row, col + 1);
+            }
+        }
     }
 }
-

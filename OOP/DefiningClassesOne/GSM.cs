@@ -15,7 +15,7 @@ namespace GSMTest
         private string ownerName;
         private Battery batteryCharacteristics;
         private Display displayCharacteristics;
-        private static readonly GSM iPhone=new GSM("Iphone4S","Apple");
+        private static GSM iPhone=new GSM("Iphone4S","Apple");
         private List<Call> callHistory = new List<Call>();
         
         //Constructor
@@ -28,9 +28,7 @@ namespace GSMTest
         //Properties
         public static GSM IPhoneInfo
         {
-
-            get { InitializeIphoneInfo(); return iPhone; }
-            
+            get { InitializeIphoneInfo(); return iPhone; }            
         }
 
         public decimal Price
@@ -70,22 +68,12 @@ namespace GSMTest
             }
         }
 
-        public List<Call> CallHistory
+        public List<Call> Calls
         {
             get { return this.callHistory; }
         }
 
         //Methods
-        private static void InitializeIphoneInfo()
-        {
-            iPhone.BatteryInfo = new Battery(Battery.BatteryType.NiMH);
-            iPhone.batteryCharacteristics.IdleHours = 300;
-            iPhone.batteryCharacteristics.TalkHours = 10;
-            iPhone.displayCharacteristics = new Display(5, 15390232);
-            iPhone.ownerName = "Stamat Georgiev";
-            iPhone.price = 600m;
-        }
-
         public void AddCallsToHistory(DateTime date, string number, int duration )
         {
             Call newCall = new Call(date, number, duration);
@@ -105,8 +93,8 @@ namespace GSMTest
         public decimal CalculatePriceOfCalls(decimal pricePerMin)
         {
             decimal price = 0.0m;
-            
-            foreach (Call call in CallHistory)
+
+            foreach (Call call in callHistory)
             {
                 price += (call.Duration / 60) * pricePerMin;
                 if(call.Duration%50>0)
@@ -122,6 +110,16 @@ namespace GSMTest
         {
             return string.Format("Phone info:\nManufacturer: {0}\nModel: {1}\nPrice: {2:C2}\nOwner: {3}\nBattery info:\n{4}\nDisplay info:\n{5}",
                 this.manufacturer, this.model, this.price, this.ownerName,this.batteryCharacteristics, this.displayCharacteristics);
-        }       
+        }
+
+        private static void InitializeIphoneInfo()
+        {
+            iPhone.BatteryInfo = new Battery(Battery.BatteryType.NiMH);
+            iPhone.batteryCharacteristics.IdleHours = 300;
+            iPhone.batteryCharacteristics.TalkHours = 10;
+            iPhone.displayCharacteristics = new Display(5, 15390232);
+            iPhone.ownerName = "Stamat Georgiev";
+            iPhone.price = 600m;
+        }
     }
 }

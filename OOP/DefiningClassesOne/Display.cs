@@ -12,18 +12,9 @@ namespace GSMTest
         private int colours;
 
         public Display(int size, int colours)
-        {
-            if (size < 4 || size > 10)
-            {
-                throw new ArgumentException("Invalid size. It should be in the range [4...10] inches.");
-            }
-
-            if (colours < 1 || colours > 20000000)
-            {
-                throw new ArgumentException("Invalid size. It should be in the range [1...20 000 000] colours.");
-            }
-            this.size = size;
-            this.colours = colours;
+        {                        
+            this.Size = size;
+            this.Colours = colours;
         }
 
         public int Size
@@ -35,21 +26,18 @@ namespace GSMTest
                 {
                     throw new ArgumentException("Invalid size. It should be in the range [4...10] inches.");
                 }
-
                 this.size = value;
             }
         }
 
         public int Colours
         {
-            get { return this.colours; }
             set
             {
                 if (value < 1 || value > 20000000)
                 {
                     throw new ArgumentException("Invalid size. It should be in the range [1...20 000 000] colours.");
                 }
-
                 this.colours = value;
             }
         }

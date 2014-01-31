@@ -19,16 +19,6 @@ namespace GSMTest
             this.duration = duration;
         }
 
-        public DateTime TimeOfCall
-        {
-            get { return this.callDateAndTime; }
-        }
-
-        public string CalledNumber
-        {
-            get { return this.calledNumber; }
-        }
-
         public int Duration
         {
             get { return this.duration; }

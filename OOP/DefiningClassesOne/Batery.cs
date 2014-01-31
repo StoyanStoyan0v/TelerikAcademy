@@ -14,10 +14,6 @@ namespace GSMTest
 
         public Battery(BatteryType model)
         {
-            if ((int)model < 0 || (int)model > 2)
-            {
-                throw new ArgumentException("Model not found!");
-            }
             this.batteryModel = model;
         }
 

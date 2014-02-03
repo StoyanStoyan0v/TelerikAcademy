@@ -35,7 +35,7 @@
         {
             get
             {
-                if (index < 0 || index >= this.array.Length)
+                if (index < 0 || index >= this.Count)
                 {
                     throw new IndexOutOfRangeException();
                 }
@@ -44,7 +44,7 @@
 
             set
             {
-                if (index < 0 || index >= this.array.Length)
+                if (index < 0 || index >= this.Count)
                 {
                     throw new IndexOutOfRangeException();
                 }
@@ -65,17 +65,20 @@
        
         public void Insert(T element, int position)
         {
-            if (position < 0 || position >= this.array.Length)
+            if (position < 0 || position > this.Count+1)
             {
                 throw new IndexOutOfRangeException();
             }
 
             T[] left = new T[position];
-            T[] right = new T[this.array.Length - position];
+            T[] right = new T[this.Count - position];
             Array.Copy(this.array, 0, left, 0, left.Length);
-            Array.Copy(this.array, position, right, 0, right.Length);      
-                                   
-            this.ResizeList();            
+            Array.Copy(this.array, position, right, 0, right.Length);
+
+            if (position >= this.Capacity)
+            {
+                this.ResizeList();
+            }
                         
             Array.Copy(left, 0, this.array, 0, left.Length);
             this.array[position] = element;
@@ -85,7 +88,7 @@
 
         public void RemoveAt(int position)
         {
-            if (position < 0 || position >= this.array.Length)
+            if (position < 0 || position >= this.Count)
             {
                 throw new IndexOutOfRangeException();
             }
@@ -95,8 +98,7 @@
             Array.Copy(this.array, position+1, right, 0, right.Length);
             Array.Copy(left, 0, this.array, 0, left.Length);
             Array.Copy(right, 0, this.array, position, right.Length);
-            Count--;
-           
+            Count--;          
         }
 
         public int IndexOf(T element)

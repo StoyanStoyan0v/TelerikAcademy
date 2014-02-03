@@ -1,7 +1,7 @@
 ﻿namespace GenericList
 {
     using System;
-
+    using System.Text;
     //Inherit the IComparable interface for generic types to make the data comparison available.
     public class GenericList<T>  where T : IComparable<T>
     {
@@ -35,32 +35,32 @@
         {
             get
             {
-                if (index < 0 || index >= array.Length)
+                if (index < 0 || index >= this.array.Length)
                 {
                     throw new IndexOutOfRangeException();
                 }
-                return array[index];
+                return this.array[index];
             }
 
             set
             {
-                if (index < 0 || index >= array.Length)
+                if (index < 0 || index >= this.array.Length)
                 {
                     throw new IndexOutOfRangeException();
                 }
 
-                array[index] = value;
+                this.array[index] = value;
             }
         }
 
         public void Add(T element)
         {
-            if(Count>=array.Length)
+            if(this.Count>=this.array.Length)
             {
                 ResizeList();
             }
-            this.array[Count] = element;
-            Count++;
+            this.array[this.Count] = element;
+            this.Count++;
         }
        
         public void Insert(T element, int position)
@@ -71,15 +71,16 @@
             }
 
             T[] left = new T[position];
-            T[] right = new T[array.Length - position];
+            T[] right = new T[this.array.Length - position];
             Array.Copy(this.array, 0, left, 0, left.Length);
             Array.Copy(this.array, position, right, 0, right.Length);      
                                    
-            ResizeList();            
+            this.ResizeList();            
                         
             Array.Copy(left, 0, this.array, 0, left.Length);
             this.array[position] = element;
-            Array.Copy(right, 0, this.array, position + 1, right.Length); 
+            Array.Copy(right, 0, this.array, position + 1, right.Length);
+            Count++;
         }
 
         public void RemoveAt(int position)
@@ -89,11 +90,13 @@
                 throw new IndexOutOfRangeException();
             }
             T[] left = new T[position];
-            T[] right = new T[array.Length - position-1];
+            T[] right = new T[this.array.Length - position-1];
             Array.Copy(this.array, 0, left, 0, left.Length);
             Array.Copy(this.array, position+1, right, 0, right.Length);
             Array.Copy(left, 0, this.array, 0, left.Length);
-            Array.Copy(right, 0, this.array, position, right.Length); 
+            Array.Copy(right, 0, this.array, position, right.Length);
+            Count--;
+           
         }
 
         public int IndexOf(T element)
@@ -103,14 +106,15 @@
 
         public void Clear()
         {
-            Array.Clear(array, 0, array.Length);
+            this.array = new T[this.Capacity];
+            this.Count = 0;
         }
 
 
         public T Min() 
         {
             T min = this.array[0];
-            for (int i = 1; i < Count; i++)
+            for (int i = 1; i < this.Count; i++)
             {
 
                 if ( this.array[i].CompareTo(min) < 0)
@@ -138,17 +142,22 @@
         }
         public override string ToString()
         {
+            StringBuilder result = new StringBuilder();
+            for (int i = 0; i < this.Count; i++)
+            {
+                result.Append(array[i]+" ");
+            }
 
-            return string.Join(" ", this.array);
+            return result.ToString().Trim();
         }
 
         private void ResizeList()
         {
-            Capacity *= 2;
-            T[] tempArr = new T[Capacity];           
-            Array.Copy(this.array, tempArr, Count);
-            array = new T[Capacity];
-            Array.Copy(tempArr, this.array, Count);
+            this.Capacity *= 2;
+            T[] tempArr = new T[this.Capacity];           
+            Array.Copy(this.array, tempArr, this.Count);
+            this.array = new T[this.Capacity];
+            Array.Copy(tempArr, this.array, this.Count);
         }
     }
 }

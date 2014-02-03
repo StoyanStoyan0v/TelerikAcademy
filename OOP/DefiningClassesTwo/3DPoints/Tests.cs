@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _3DPoints
+﻿namespace _3DPoints
 {
+    using System;
+    using System.Collections.Generic;
+
     class Tests
     {
         static void Main(string[] args)
@@ -22,15 +19,19 @@ namespace _3DPoints
             path1.AddPoint(Point3D.Point0);
             path1.AddPoint(p2);
             path1.AddPoint(new Point3D(3, 1.4f, -6));
+
             Path path2 = new Path(new Point3D(5, 2.35f, -12), new Point3D(-3.56f, 0.92f, 4));
             path2.AddPoint(new Point3D(3, 1.4f, -6));
+
             PathStorage.SavePath(path1);
             PathStorage.SavePath(path2);
+
             List<string> paths = PathStorage.LoadPaths();
             for (int i = 0; i < paths.Count; i++)
             {
                 Console.WriteLine("Path {0}: {1}",i+1,paths[i]); 
-            }            
+            }
+
         }
     }
 }

@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _3DPoints
+﻿namespace _3DPoints
 {
+    using System.Collections.Generic;
+    using System.Text;
+
     public class Path 
     {
         private List<Point3D> path;

@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GenericList
+﻿namespace GenericList
 {
+    using System;
+
     public static class SecondTest
     {
         private static GenericList<string> names = new GenericList<string>();

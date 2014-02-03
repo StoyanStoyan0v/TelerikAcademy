@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GenericList
+﻿namespace GenericList
 {
+    using System;
+
     public static class FirstTest
     {
-        private static GenericList<string> animals = new GenericList<string>(2);
+        private static GenericList<string> animals = new GenericList<string>(-1);
 
         static FirstTest ()
         {

@@ -1,25 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GenericList
+﻿namespace GenericList
 {
+    using System;
+
     //Inherit the IComparable interface for generic types to make the data comparison available.
-    public class GenericList<T> where T:IComparable<T>
+    public class GenericList<T>  where T : IComparable<T>
     {
         private const int DEFAULT_CAPACITY = 10;
         private T[] array;
+        private int capacity;
 
         public GenericList(int capacity = DEFAULT_CAPACITY)
-        {
-            this.array = new T[capacity];
+        {           
             this.Count = 0;
             this.Capacity = capacity;
+            this.array = new T[capacity];
         }
 
-        public int Capacity { get; private set; }
+        public int Capacity
+        {
+            get { return this.capacity; }
+            private set
+            {
+                if(value<0)
+                {
+                    throw new IndexOutOfRangeException("The list capacity cannot be a negative number!");
+                }
+                this.capacity = value;
+            }
+        }
 
         public int Count { get; private set; }
 
@@ -91,13 +99,7 @@ namespace GenericList
         public int IndexOf(T element)
         {
             return Array.IndexOf(this.array, element);
-        }
-
-        public override string ToString()
-        {
-            
-            return string.Join(" ", this.array);
-        }
+        }        
 
         public void Clear()
         {
@@ -133,6 +135,11 @@ namespace GenericList
             }
 
             return max;
+        }
+        public override string ToString()
+        {
+
+            return string.Join(" ", this.array);
         }
 
         private void ResizeList()

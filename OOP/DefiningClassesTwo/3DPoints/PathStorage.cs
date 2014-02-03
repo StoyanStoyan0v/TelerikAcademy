@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
-
-namespace _3DPoints
+﻿namespace _3DPoints
 {
+    using System;
+    using System.Collections.Generic;
+    using System.IO;
+
     public static class PathStorage
     {
 
@@ -30,6 +27,7 @@ namespace _3DPoints
         {
             StreamReader reader = new StreamReader("paths.txt");
             List<string> allPaths = new List<string>();
+
             try
             {
                 using (reader)
@@ -44,6 +42,7 @@ namespace _3DPoints
             {
                 Console.WriteLine("The current file cannot be manipulated! ");
             }
+
             return allPaths;
         }
 

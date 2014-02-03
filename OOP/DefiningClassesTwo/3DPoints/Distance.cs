@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _3DPoints
+﻿namespace _3DPoints
 {
+    using System;
+
     public static class Distance
     {
         public static double CalculateDistance(Point3D p1, Point3D p2)

@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GenericMatrix
+﻿namespace GenericMatrix
 {
+    using System;
+
     public static class SecondTest
     {
         private static Matrix<string> matrix = new Matrix<string>(3, 3);

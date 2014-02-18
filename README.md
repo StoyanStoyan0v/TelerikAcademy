@@ -1,4 +1,4 @@
 TelerikAcademy
 ==============
 
-Homeworks in academy of Telerik
+Homeworks in the academy of Telerik

@@ -1,0 +1,23 @@
+body {
+        background: #ccecdd;
+        color:darkblue;
+        font-style:italic;
+        font-family:Calibri; 
+}
+a {
+	text-decoration: none;
+}
+ul{
+	padding-left: 0px;
+}
+li {
+    display:inline-table;
+    padding-right:105px;          
+}
+div{
+	padding-left: 10px;
+}
+img {
+    width: 250px;
+    height: 180px;
+}

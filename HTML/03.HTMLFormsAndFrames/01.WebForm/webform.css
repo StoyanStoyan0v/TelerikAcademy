@@ -1,0 +1,47 @@
+﻿table, td
+{
+    border: 1px solid gray;
+}
+label
+{
+    display: block;
+    text-align: right;
+    font-weight: bold; 
+}
+#month, #day, #acode, #ccode
+{
+    width: 40px;
+}
+#stateLabel, div label
+{
+    display: inline;
+    text-align: justify;
+}
+.season, .birthDate
+{
+    display: inline-block;
+    font-weight: normal;
+}
+#bday, #starting
+{
+    font-weight: bold;
+    text-align: right;
+}
+input.name, textarea
+{
+    width: 280px;
+}
+#year, #state
+{
+    width: 60px;
+}
+tfoot
+{
+    text-align: center;
+    background-color: lightblue;
+}
+img
+{
+    width: 10px;
+    height: 10px;
+}

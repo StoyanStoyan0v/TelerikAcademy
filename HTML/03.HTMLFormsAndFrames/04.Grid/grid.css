@@ -1,0 +1,30 @@
+﻿table, td, th {
+    border-collapse: collapse;
+    border: solid black 1px;
+    text-align: left;
+}
+thead, tfoot {
+    background-color: lightgray;
+}
+#quantity, #unitprice, #unitsinstock {
+    width: 100px;
+}
+#productname {
+    width: 150px;
+}
+#productid {
+    width: 30px;
+}
+#nameCell {
+    width: 230px;
+}
+#pagesFooter {
+    text-align: right;
+    border-left: hidden;
+}
+#priceCell, #quantityCell, #stockCell {
+    width: 200px;
+}
+a {
+    text-decoration: none;
+}

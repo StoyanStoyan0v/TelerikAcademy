@@ -1,0 +1,39 @@
+﻿#mainFrame
+{
+    border-collapse: collapse;
+    border: solid black 1px;
+    margin-left: 200px;
+}
+img
+{
+    width: 100px;
+    height: 65px;
+}
+td
+{
+    vertical-align: text;
+}
+h3
+{
+    text-align: center;
+}
+#sliders
+{
+    border-left: solid black 1px;
+    border-top: hidden;
+    border-bottom: hidden;
+    border-right: hidden;
+    padding: 50px; 
+}
+.label
+{
+    padding-top: 5px;
+}
+span
+{
+    padding-left: 30px;
+}
+body
+{
+    font-family: 'Candara', Verdana;
+}

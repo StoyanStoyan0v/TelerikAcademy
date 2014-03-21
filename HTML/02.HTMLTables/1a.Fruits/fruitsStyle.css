@@ -1,0 +1,13 @@
+table{
+    width: 500px;
+    text-align: justify;
+    text-indent: 20px;
+}
+img{
+    width: 150px;
+    height: 100px;
+}
+th{
+    text-align: center;
+    font-size: 30px;       
+}   

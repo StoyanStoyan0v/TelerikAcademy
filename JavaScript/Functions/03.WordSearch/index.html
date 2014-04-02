@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Word Seatch</title>
+        <script src="js-script.js"></script>
+        <link href="styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <label for="inp">Enter text:</label><br />
+        <textarea name="name" id="inp" ></textarea><br />
+        <label for="word">Enter word: </label>
+        <input type="text" name="name" id="word"/><br />
+        <input type="button" name="sens" value="Case sensitive search " onclick="onClickSens()" />
+        <input type="text" id="senswords" disabled /> <br />
+        <input type="button" name="insens" value="Case insensitive search " onclick="onClickInsens()"/>
+        <input type="text" id="insenswords" disabled />
+    </body>
+</html>

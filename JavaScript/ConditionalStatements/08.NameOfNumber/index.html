@@ -1,0 +1,14 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Name of number</title>
+        <script src="js-script.js"></script>
+    </head>
+    <body>
+        <label for="number">Number: </label>
+        <input type="text" name="number" id="number" onchange="onChange(number, this.value)" /><br />
+        <input type="button" name="submit" value="Get Number Name" onclick="getNumber()" /><br />
+        <label for="result"> Number's name: </label><br />
+        <textarea id="result" readonly></textarea>
+    </body>
+</html>

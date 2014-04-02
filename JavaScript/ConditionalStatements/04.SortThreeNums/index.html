@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Sort numbers</title>
+    <script src="js-script.js"></script>
+</head>
+<body>
+    <label for="firstNum">First number: </label>
+    <input type="text" name="firstNum" id="firstNum" onchange="onChange(firstNum, this.value)" /><br />
+    <label for="secondNum">Second number: </label>
+    <input type="text" name="secondNum" id="secondNum" onchange="onChange(secondNum, this.value)" /><br />
+    <label for="thirdNumber">Third number: </label>
+    <input type="text" name="thirdNumber" id="thirdNumber" onchange="onChange(thirdNumber, this.value)" /><br />
+    <input type="button" name="submit" value="Sort" onclick="sort()" /><br />
+    <label for="result"> Result: </label><br />
+    <textarea id="result" readonly></textarea>
+</body>
+</html>
+
+

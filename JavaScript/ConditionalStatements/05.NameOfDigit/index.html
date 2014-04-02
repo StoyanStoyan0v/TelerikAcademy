@@ -1,0 +1,15 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Name of digit</title>
+        <script src="js-script.js"></script>
+    </head>
+    <body>
+        <label for="digit">Digit: </label>
+        <input type="text" name="digit" id="digit" onchange="onChange(digit, this.value)" /><br />
+        <input type="button" name="submit" value="Get Digit Name" onclick="getDigit()" /><br />
+        <label for="result"> Digit's name: </label><br />
+        <textarea id="result" readonly></textarea>
+    </body>
+</html>
+

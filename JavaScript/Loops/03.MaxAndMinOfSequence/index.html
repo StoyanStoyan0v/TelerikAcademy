@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Max and min</title>
+        <script src="js-script.js"></script>
+    </head>
+    <body>
+        <label for="seq">Enter a sequence (e.g. 3 2 8 1 4): </label>
+        <input type="text" name="seq" id="seq" onchange="onChange(seq, this.value)" /><br />
+        <input type="button" name="submit" value="Get Min" onclick="getMin()" />
+        <label for="min"> Min: </label>
+        <input type="text" id="min" readonly/><br />
+        <input type="button" name="submit" value="Get Max" onclick="getMax()" />
+        <label for="max"> Max: </label>
+        <input type="text" id="max" readonly/>
+
+    </body>
+</html>

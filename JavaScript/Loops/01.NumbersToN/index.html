@@ -1,0 +1,14 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Numbers to N</title>
+        <script src="js-script.js"></script>
+    </head>
+    <body>
+        <label for="n">N: </label>
+        <input type="text" name="n" id="n" onchange="onChange(n, this.value)" /><br />
+        <input type="button" name="submit" value="Get Numbers to N" onclick="getDigit()" /><br />
+        <label for="result"> Numbers from 1 to N: </label><br />
+        <textarea id="result" readonly></textarea>
+    </body>
+</html>

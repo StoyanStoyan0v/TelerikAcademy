@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Substring Searcher</title>
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <label for="input">Enter some text: </label>
+        <br />
+        <textarea id="input"  cols="100" rows="10"></textarea>
+        <br />
+        <label for="substring"> Enter some string to be searched: </label>
+        <input type="text" id="word" />
+        <br />
+        <input type="radio" id="sens" name="case" value="sense" checked />
+        <label for="sens">Case sensitive search</label>
+        <input type="radio" id="insens" name="case" value="insens" />
+        <label for="insens">Case insensitive search</label>
+        <br />
+        <input type="button" value="Search" onclick="search()" />
+        <br />
+        <label for="result">Result:</label>
+        <input style="width:300px;" type="text" id="result" disabled />
+    </body>
+</html>

@@ -1,0 +1,171 @@
+﻿body, h1, h2, nav, aside, section, ul, li, p {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+body {
+    @redcolor: #900b09;
+    @whitecolor: #fff;
+    @blackcolor: #000;
+    @graycolor: #808080;
+
+    .clearfix {
+        zoom: 1;
+        &:after {
+            display: block; content: "";
+            height: 0; clear: both;
+        }
+    }
+        
+    padding: 1px;
+    width: 850px;
+    background-color: #f1f1f1;
+    font: 12px/1.2 Verdana, sans-serif;
+
+    ul {
+        list-style-type: none;
+    }
+
+    h2 {
+        font-size: 1.1em;
+        color: @whitecolor;
+        background-color: @graycolor;
+        padding-left: 1%;
+        font-weight: normal;
+    }
+    &>header {
+        width: 18%;
+        float: left; 
+        
+        h1 { 
+            margin: 10% 0 0 0;
+            a {
+                display: inline-block;
+                font-size: 0.5em; 
+                color: @blackcolor;
+                text-decoration: none;
+            }
+            img {
+                width: 2em;
+                height: 2em;
+                float: left;
+                margin-top: -10%;
+                margin-bottom: 10%;
+            }
+        }
+        
+        ul {
+            margin-bottom: 5%;
+            li { 
+                a {
+                    text-decoration: none;
+                    color: @blackcolor;
+                }
+
+                &:first-child > a {
+                    color: @redcolor;
+                    font-weight: bold;
+                }
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    section {
+        display: inline-block;
+        border: 1px solid @graycolor;
+        background-color: @whitecolor;
+        padding: 4px;
+        width: 56%;
+
+        h1 {
+            margin: 2% 0;
+        }
+                
+        button {
+            position: relative;
+            background-color: @whitecolor;
+            border: 1px solid @blackcolor;
+            width: 19%;
+            text-align: center;
+
+            span.left {
+                position: absolute;
+                left: 0;
+            }
+
+            span.right {
+                position: absolute;
+                right: 0;
+            }
+        }
+        hr {
+            border: 1px solid @graycolor;
+
+            &:last-of-type {
+                margin-bottom: 8%;
+            }
+        }        
+        
+        article { 
+            padding: 1% 0;
+            margin-bottom: 2%;
+
+            &:first-of-type {
+                font-weight: bold;
+                margin-bottom: 5%;
+            }
+           
+            img {
+                float: left;
+                margin-right: 3%;
+            }
+
+            p {
+                margin: 2% 0;
+            }   
+
+            a {
+                .clearfix;
+                color: @redcolor;
+                font-weight: normal;
+            }
+        }
+    }
+    aside { 
+        width: 24%;
+        float: right; 
+
+        ul {
+            border: 1px solid @graycolor; 
+            margin-bottom: 1%;
+
+            li { 
+                background-color: @whitecolor;
+                text-align: center;
+                
+                &:last-of-type {
+                    padding-bottom: 4%;
+                } 
+
+                a {
+                    color: @redcolor;
+                    &:hover{
+                        color:@blackcolor;
+                    }
+                }
+            }
+        }
+        .last {
+            border: 0;
+
+            li { 
+                border: 1px solid @graycolor; 
+                margin-bottom: 1%;
+                padding: 2%;
+            }
+        }
+    }
+}

@@ -1,0 +1,47 @@
+﻿div.main-container {
+    border: 1px solid #eeeeee;
+    background-color: #eeeeee;
+    border-radius: 4px;
+    width: 30%;
+    padding: 10px 10px;
+}
+    div.main-container article {
+        border: 1px solid #b1b1b1;
+        background-color: #ffffff;
+        padding: 15px;
+        margin: 35px 0 15px 0;
+    }
+        div.main-container article, div.main-container article p {
+            zoom: 1;
+        }
+            div.main-container article:after, div.main-container article p {
+                content: "";
+                display: block;
+                clear: both;
+                height: 0;
+            }
+            div.main-container article img {
+                float: left;
+                margin-right: 25px;
+            }
+            div.main-container article p {
+                display: inline;
+                font-size: 15px;
+                line-height: 70%;
+            }
+            div.main-container article div {
+                text-align: right;
+            }
+                div.main-container article div button.big-button-container {
+                    background: url('/images/bigbutton.png');
+                }
+                div.main-container article div button.small-button-container {
+                    background: url('/images/smallbutton.png');
+                }
+                div.main-container article div button.big-button-container, div.main-container article div button.small-button-container {
+                    padding: 2px 10px 2px 20px;
+                    border: none;
+                    color: #eeeeee;
+                    cursor: pointer;
+                    margin: 10px -2px 0px 0px;
+                }

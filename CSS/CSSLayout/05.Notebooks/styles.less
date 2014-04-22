@@ -1,0 +1,77 @@
+﻿body {
+    .clearfix {
+        zoom: 1;
+        &:after {
+            display: block; content: "";
+            height: 0; clear: both;
+        }
+    }
+
+    width: 40%;
+    font-family: 'Candara', Verdana;
+
+    header { 
+        text-align: center;
+
+        li {
+            display: inline-block;
+            a {
+                font-size: 1.2em;
+                font-weight: bold;
+                color: #07aef0;
+            }
+        }
+
+    }
+    section { 
+        .table {
+            display: table;
+
+            .table-row {
+                display: table-row;
+
+                .table-col {
+                    display: table-cell;
+
+                    legend{
+                        text-align:center;
+                    }
+                    img {
+                        width: 100px;
+                        height: 65px;
+                        float: left;
+                    }
+                    .inline {
+                        display: inline-block; 
+
+                        p {
+                            margin: 0.7em 0;
+                        }
+                    }
+                    span {
+                        margin-left: 5%;
+                    }                  
+                }
+            }
+        }
+
+        form{
+            float:right;
+            margin:10% 0;
+            label{
+                display:inline-block;
+                margin-bottom:7%;
+            }
+            input{
+                margin-bottom:15%;
+            }
+        }
+
+        &> div{
+            display:inline-block;
+        }
+        & >.table-col:first-of-type {
+            border: 1px solid #000000;
+        }
+    }
+}

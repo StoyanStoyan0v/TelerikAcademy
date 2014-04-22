@@ -1,0 +1,80 @@
+﻿body, div, ul, li, span, a, img {
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: 'Courier New', Courier, 'Nimbus Mono L', monospace;
+    font-size: 16px;
+    color: #777;
+    .linear-gradient(@firstcolor, @firstpercent, @secondcolor, @secondpercent) {
+        background: @firstcolor; /* Old browsers */
+        background: -moz-linear-gradient(top, @firstcolor @firstpercent, @secondcolor @secondpercent); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(@firstpercent, @firstcolor), color-stop(@secondpercent, @secondcolor)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, @firstcolor @firstpercent, @secondcolor @secondpercent); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top, @firstcolor @firstpercent, @secondcolor @secondpercent); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top, @firstcolor @firstpercent, @secondcolor @secondpercent); /* IE10+ */
+        background: linear-gradient(to bottom, @firstcolor @firstpercent, @secondcolor @secondpercent); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@firstcolor', endColorstr='@secondcolor',GradientType=0 ); /* IE6-9 */
+    }
+    #wrapper {
+        width: 960px;
+        .notification-list {
+            position: relative;
+            width: 470px;
+            margin: 25px;
+            border: 1px solid #000;
+            border-bottom: none;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px; 
+            .linear-gradient(#aaa, 0, #dddddd, 80%);         
+            &>li { 
+                display: inline-block;
+                padding: 0 10px;
+                border-right: 1px solid #000;
+                border-bottom: 1px solid #000;
+                &:last-of-type {
+                    border-right: none;
+                }
+
+                a { 
+                    color: #777;
+                    text-decoration: none;
+                    font-size: 1.2em;
+                    display: block;
+                    padding: 5px;
+                    img { 
+                        width: 15px;
+                        height: 15px;
+                    }
+                }
+                .content {
+                    ul {
+                        list-style-type: none;
+                    }
+
+                    font-size: 0.9em;
+                    width: 470px;
+                    border: 1px solid #000;
+                    display: none;
+                    background-color: #ddd;
+                    border-top: none;
+                    position: absolute;
+                    left: -1px;
+                    top: 32px;
+                    a {
+                        margin-left: 10px; 
+                        img {
+                            margin-right: 5px;
+                        }                    
+                    }
+                }
+                &:hover { 
+                    border-bottom: none; 
+                    .content {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

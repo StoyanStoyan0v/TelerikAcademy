@@ -1,0 +1,78 @@
+﻿
+body, div, form, fieldset, legend, label, button, input {
+    margin: 0;
+    padding: 0;
+}
+body {
+    @defaultcolour: #333;
+    @firstcolour:#68d1ff;
+    @secondcolour:#8cfffb;
+    font-family: Verdana, Geneva, 'DejaVu Sans', sans-serif;
+    font-size: 16px;
+    color: @defaultcolour;
+
+    .linear-gradient(@firstcolor, @firstpercent, @secondcolor, @secondpercent) {
+        background: @firstcolor; /* Old browsers */
+        background: -moz-linear-gradient(top, @firstcolor @firstpercent, @secondcolor @secondpercent); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(@firstpercent, @firstcolor), color-stop(@secondpercent, @secondcolor)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, @firstcolor @firstpercent, @secondcolor @secondpercent); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top, @firstcolor @firstpercent, @secondcolor @secondpercent); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top, @firstcolor @firstpercent, @secondcolor @secondpercent); /* IE10+ */
+        background: linear-gradient(to bottom, @firstcolor @firstpercent, @secondcolor @secondpercent); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@firstcolor', endColorstr='@secondcolor',GradientType=0 ); /* IE6-9 */
+    }
+
+    #wrapper {
+        width: 960px;
+        text-align: right;
+        form {
+            width: 380px;
+            margin: 25px;
+            padding: 15px;
+            border: 1px solid #000;
+            border-radius: 15px;
+            .linear-gradient(@firstcolour, 0, @secondcolour, 100%);
+            fieldset {
+                border: 3px solid @defaultcolour;
+                border-radius: 5px;
+                padding: 0 15px 5px;
+                legend {
+                    text-align: right; 
+                    font-size: 1.3em;
+                    font-style: italic;
+                    padding: 0 15px;
+                }
+                input {
+                    padding: 5px 15px;
+                    margin-top: 1px;
+
+                    &:first-of-type {
+                        margin-top: 6px;
+                    }
+
+                    border: 1px solid #008fce;
+                    border-radius: 5px;
+                    .linear-gradient(@firstcolour, 0, @secondcolour, 100%);
+                    width: 149px;
+                }
+                #tb-age {
+                    width: 30px;
+                    padding-left: 5px;
+                }
+            }
+            &>input, &>button {
+                border: none;
+                border-bottom: 1px solid @defaultcolour;
+                color: @defaultcolour;
+                padding: 5px 15px;
+                border-radius: 5px;
+                margin-top: 10px;
+                font-size: 1.2em;
+                .linear-gradient(@firstcolour, 0, @secondcolour, 100%);
+                &:hover {
+                    background: #9be1ff;
+                }
+            }
+        }
+    }
+}

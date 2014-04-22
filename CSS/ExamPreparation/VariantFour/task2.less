@@ -1,0 +1,56 @@
+﻿html, body, div, img, ul, li, span, a {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+    font-size: 16px;
+
+    #wrapper {
+        width: 960px;
+        &>div {
+            margin: 15px;
+            background-color: #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            width: 680px;
+            .holder {
+                display: inline-block;
+                img {
+                    border-radius: 5px;
+                    width: 550px;
+                    height: 414px;
+                }
+            }
+            .playlist {
+                display: inline-block;
+                float: right; 
+                ul {
+                    list-style-type: none;
+                    li {
+                        border-bottom: 1px solid #000;
+                        margin-top: 5px;
+                        a {
+                            color: #000;
+                            text-decoration: none; 
+                            font-weight: bold;
+                           
+                            img {
+                                border-radius: 10px;
+                                margin-left: 17px;
+                            }
+                            span {
+                                display: block;
+                                padding: 0 0 5px 10px;
+                                margin-top: -5px;
+                            }
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

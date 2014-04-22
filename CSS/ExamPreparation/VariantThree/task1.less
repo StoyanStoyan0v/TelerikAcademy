@@ -1,0 +1,109 @@
+﻿body, html, div, ul, li, a, span {
+    margin: 0;
+    padding: 0;
+}
+body {
+    @font-color: #0094ff; 
+    @background-color: #aaffef;
+    .linear-gradient(@firstcolor, @firstpercent, @secondcolor, @secondpercent) {
+        background: @firstcolor; /* Old browsers */
+        background: -moz-linear-gradient(top, @firstcolor @firstpercent, @secondcolor @secondpercent); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(@firstpercent, @firstcolor), color-stop(@secondpercent, @secondcolor)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, @firstcolor @firstpercent, @secondcolor @secondpercent); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top, @firstcolor @firstpercent, @secondcolor @secondpercent); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top, @firstcolor @firstpercent, @secondcolor @secondpercent); /* IE10+ */
+        background: linear-gradient(to bottom, @firstcolor @firstpercent, @secondcolor @secondpercent); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@firstcolor', endColorstr='@secondcolor',GradientType=0 ); /* IE6-9 */              
+    }
+
+    color: @font-color;
+    font-size: 16px;
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'DejaVu Sans Condensed', sans-serif;
+    #wrapper {
+        width: 960px;
+        
+        .msg-bar {
+            width: 560px;
+            margin: 200px 50px; 
+            position: relative; 
+            display: inline-block;
+            &>li {
+                padding-top: 5px;
+                display: inline-block;
+                
+                .msg-bar-btn {
+                    border: 1px solid #000;
+                    display: inline-block;
+                    padding: 5px 15px;
+                    color: @font-color;
+                    text-decoration: none;
+                    .linear-gradient(#aaffef, 0, #20ffd5, 100%);
+
+                }
+                .msg-bar-content {
+                    display: none;
+                    position: absolute;
+                    bottom: 35px;
+                    left: 0;
+                    width: 430px;
+                    padding: 5px 15px;
+                    background: @background-color;
+                    border: 1px solid #000;
+                    border-top-left-radius: 15px;
+                    border-top-right-radius: 15px;
+                    border-bottom: none;
+                    ul {
+                        list-style-type: none;
+                        text-align: right;
+                        color: @font-color;
+                        li {
+                            margin-top: 5px;
+                            span {
+                                display: block;
+                                padding: 5px 15px;
+                                margin-left: 100px;
+                                border-bottom: 1px solid #000;
+                                text-align: right;
+                                &.user {
+                                    border: 1px solid black;
+                                    border-radius: 100px;
+                                    float: left;
+                                    padding-left: 25px;
+                                    background-position: 5px center;
+                                    background-repeat: no-repeat;
+                                    margin: 0;
+                                }
+                            }
+                            &:last-of-type {
+                                span:not(.user) {
+                                    border: none;
+                                }
+                            }
+                            &.me-item {
+                                span.user {
+                                    background-image: url(imgs/me.png);
+                                    background-repeat: no-repeat;
+                                }
+                            }
+
+                            &.other-item {
+                                span.user {
+                                    background-image: url(imgs/male.png);
+                                }
+                            }
+                        }
+                    }   
+                }
+                &:hover {
+                    .msg-bar-btn {
+                        border-top: 5px solid @background-color; 
+                        background: #00ddb3;
+                    }
+                    .msg-bar-content {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

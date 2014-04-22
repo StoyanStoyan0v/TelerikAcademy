@@ -1,0 +1,43 @@
+﻿body
+{
+    background-color: dimgray;
+}
+header, a
+{
+    font-weight: bold;
+    text-align: center;
+    color: snow;
+    font-size: 110%;
+}
+ul
+{
+    list-style-type: none;
+}
+a
+{
+    text-decoration: none;
+}
+footer
+{
+    text-align: center;
+}
+a:hover
+{
+    background-color: lightgray;
+    text-decoration: underline;
+}
+section header
+{
+    text-align: left;
+}
+section footer
+{
+    font-size: 80%;
+    text-align: left;
+}
+
+footer a
+{
+    color: black;
+    font-weight: normal;
+}

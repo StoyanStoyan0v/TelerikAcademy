@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Calculator</title>
+        <link href="styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div id="main">
+            <header>
+                <img src="http://s21.postimg.org/v5tehcvo3/windows_calculator.png?noCache=1396599788" alt="calculator" /> Calculator               
+                <span> 
+                    <input type="button" name="min" id="min"  />
+                    <input type="button" name="max" id="max"  disabled />
+                    <input type="button" name="exit" id="exit"  />
+                 </span>
+            </header>
+            <section>
+                <header>
+                    <nav>
+                        <ul>
+                            <li><a href="#">View</a></li>
+                            <li><a href="#">Edit</a></li>
+                            <li><a href="#">Help</a></li>
+                        </ul>
+                    </nav>
+                </header> 
+                <div>
+                    <textarea >8854455</textarea>
+                    <table>
+                        <tr>
+                            <td class="right-padding">0000</td>
+                            <td class="right-padding">0000</td>
+                            <td class="right-padding">0000</td>
+                            <td class="right-padding">0000</td>
+                            <td class="right-padding">0000</td>
+                            <td class="right-padding">0000</td>
+                            <td class="right-padding">0000</td>
+                            <td>0000</td>
+                        </tr>
+                        <tr>
+                            <td class="left-aligned" colspan="4">63</td>
+                            <td class="left-aligned" colspan="2">47</td>
+                            <td class="right-aligned" colspan="2">32</td>
+                        </tr>
+                        <tr>
+                            <td class="right-padding">0000</td>
+                            <td class="right-padding">0000</td>
+                            <td class="right-padding">1000</td>
+                            <td class="right-padding">0111</td>
+                            <td class="right-padding">0001</td>
+                            <td class="right-padding">1011</td>
+                            <td class="right-padding">1011</td>
+                            <td>0111</td>
+                        </tr>
+                        <tr>
+                            <td class="left-aligned" colspan="4">31</td>
+                            <td class="left-aligned" colspan="2">15</td>
+                            <td class="right-aligned" colspan="2">0</td>
+                        </tr>
+                    </table>
+                    <table id="keyboard">
+                        <tr>
+                            <td class="radio-btn" colspan="2" rowspan="3">
+                                <input type="radio" name="numeral" /><span>Hex</span><br />
+                                <input type="radio" name="numeral" /><span>Dec</span><br />
+                                <input type="radio" name="numeral" /><span>Oct</span><br />
+                                <input type="radio" name="numeral" /><span>Bin</span>
+                            </td >
+                            <td><a href="#"></a></td>
+                            <td class="gradient"><a href="#">Mod</a></td>
+                            <td><a href="#">A</a></td>
+                            <td><a href="#">MC</a></td>
+                            <td><a href="#">MR</a></td>
+                            <td><a href="#">MS+</a></td>
+                            <td><a href="#">M+</a></td>
+                            <td><a href="#">M-</a></td>
+                        </tr>
+                        <tr>
+                            <td class="gradient"><a href="#">(</a></td>
+                            <td class="gradient"><a href="#">)</a></td>
+                            <td><a href="#">B</a></td>
+                            <td class="gradient"><a href="#">&larr;</a></td>
+                            <td class="gradient"><a href="#">CE</a></td>
+                            <td class="gradient"><a href="#">C</a></td>
+                            <td class="gradient"><a href="#">&#177;</a></td>
+                            <td><a href="#">&radic;</a></td>
+                        </tr>
+                        <tr>
+                            <td class="gradient"><a href="#">RoL</a></td>
+                            <td class="gradient"><a href="#">RoR</a></td>
+                            <td><a href="#">C</a></td>
+                            <td class="num"><a href="#">7</a></td>
+                            <td class="num"><a href="#">8</a></td>
+                            <td class="num"><a href="#">9</a></td>
+                            <td class="gradient"><a href="#">/</a></td>
+                            <td><a href="#">%</a></td>
+                        </tr>
+                        <tr>
+                            <td class="radio-btn" colspan="2" rowspan="3">
+                                <input type="radio" name="something" /><span>Qword</span><br />
+                                <input type="radio" name="something" /><span>DWord</span><br />
+                                <input type="radio" name="something" /><span>Word</span><br />
+                                <input type="radio" name="something" /><span>Byte</span>
+                            </td>
+                            <td class="gradient"><a href="#">Or</a></td>
+                            <td class="gradient"><a href="#">Xor</a></td>
+                            <td><a href="#">D</a></td>
+                            <td class="num"><a href="#">4</a></td>
+                            <td class="num"><a href="#">5</a></td>
+                            <td class="num"><a href="#">6</a></td>
+                            <td class="gradient"><a href="#">*</a></td>
+                            <td><a href="#">1/x</a></td>
+                        </tr>
+                        <tr>
+                            <td class="gradient"><a href="#">Lsh</a></td>
+                            <td class="gradient"><a href="#">Rsh</a></td>
+                            <td><a href="#">D</a></td>
+                            <td class="num"><a href="#">1</a></td>
+                            <td class="num"><a href="#">2</a></td>
+                            <td class="num"><a href="#">3</a></td>
+                            <td class="gradient"><a href="#">-</a></td>
+                            <td class="gradient" rowspan="2"><a href="#">=</a></td>
+                        </tr>
+                        <tr>
+                            <td class="gradient"><a href="#">Not</a></td>
+                            <td class="gradient"><a href="#">And</a></td>
+                            <td><a href="#">F</a></td>
+                            <td class="num" colspan="2"><a href="#">0</a></td>
+                            <td><a href="#">.</a></td>
+                            <td class="gradient"><a href="#">+</a></td>
+                        </tr>
+                    </table>
+                </div>            
+            </section>
+        </div>
+    </body>
+</html>

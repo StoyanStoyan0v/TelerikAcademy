@@ -1,0 +1,72 @@
+﻿body,
+div,
+html,
+ul,
+li,
+a,
+aside {
+  margin: 0;
+  padding: 0;
+}
+ul.sidebar {
+  width: 15%;
+  border-radius: 10px;
+  font-family: Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+  font-size: 22.4px;
+  list-style-type: none;
+  background: #d19bff;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #d19bff 1%, #8b78ff 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #d19bff), color-stop(100%, #8b78ff));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #d19bff 1%, #8b78ff 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #d19bff 1%, #8b78ff 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #d19bff 1%, #8b78ff 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #d19bff 1%, #8b78ff 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d19bff', endColorstr='#8b78ff', GradientType=0);
+  /* IE6-9 */
+  padding: 5px 1%;
+  margin: 5px 10px;
+}
+ul.sidebar li {
+  border-bottom: 1px solid #9d00ff;
+  padding: 4px 10px;
+  text-align: center;
+  position: relative;
+}
+ul.sidebar li:last-of-type {
+  border-bottom: none;
+}
+ul.sidebar li:hover {
+  border: 1px solid #9d00ff;
+  border-radius: 5px;
+}
+ul.sidebar li a {
+  text-decoration: none;
+  color: black;
+}
+ul.sidebar li ul {
+  background-image: url('/imgs/arrow.png');
+  background-position: 5px 10px;
+  background-repeat: no-repeat;
+  list-style-type: none;
+  position: absolute;
+  font-size: 16px;
+  display: none;
+  background-color: #b5aaff;
+  border-radius: 5px;
+  padding: 5px;
+  padding-left: 20px;
+  width: 100%;
+  left: 101%;
+  top: -5px;
+}
+ul.sidebar li:hover > a + ul {
+  display: block;
+}
+/*# sourceMappingURL=task1.css.map */

@@ -1,0 +1,63 @@
+﻿body,
+h1,
+h2,
+nav,
+aside,
+section,
+ul,
+li,
+p {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+body {
+  font: 15px/1.2 Tahoma, sans-serif;
+  width: 80%;
+  background-color: #1e3741;
+}
+body nav {
+  margin: 1% 0;
+}
+body .main li {
+  display: inline-block;
+  background-color: #4b5f67;
+  margin-left: -2px;
+  padding: 1%;
+}
+body .main li:hover {
+  background-color: #1e3741;
+}
+body .main li:hover a {
+  color: #ffffff;
+}
+body a {
+  text-decoration: none;
+  color: #8ea8a9;
+}
+body .side {
+  position: relative;
+  width: 26%;
+  display: inline-block;
+  margin: 0;
+}
+body .side li {
+  display: block;
+  padding: 3% 10% 3% 8px;
+  border-bottom: 1px solid #00968c;
+}
+body .side li:last-of-type {
+  border: none;
+}
+body .side li:hover {
+  background-color: #00968c;
+}
+body .side li:hover a {
+  color: #ffffff;
+}
+body img {
+  position: absolute;
+  width: 385px;
+  height: 275px;
+}
+/*# sourceMappingURL=stytles.css.map */

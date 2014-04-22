@@ -1,0 +1,68 @@
+﻿body {
+  width: 40%;
+  font-family: 'Candara', Verdana;
+}
+body .clearfix {
+  zoom: 1;
+}
+body .clearfix:after {
+  display: block;
+  content: "";
+  height: 0;
+  clear: both;
+}
+body header {
+  text-align: center;
+}
+body header li {
+  display: inline-block;
+}
+body header li a {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #07aef0;
+}
+body section .table {
+  display: table;
+}
+body section .table .table-row {
+  display: table-row;
+}
+body section .table .table-row .table-col {
+  display: table-cell;
+}
+body section .table .table-row .table-col legend {
+  text-align: center;
+}
+body section .table .table-row .table-col img {
+  width: 100px;
+  height: 65px;
+  float: left;
+}
+body section .table .table-row .table-col .inline {
+  display: inline-block;
+}
+body section .table .table-row .table-col .inline p {
+  margin: 0.7em 0;
+}
+body section .table .table-row .table-col span {
+  margin-left: 5%;
+}
+body section form {
+  float: right;
+  margin: 10% 0;
+}
+body section form label {
+  display: inline-block;
+  margin-bottom: 7%;
+}
+body section form input {
+  margin-bottom: 15%;
+}
+body section > div {
+  display: inline-block;
+}
+body section > .table-col:first-of-type {
+  border: 1px solid #000000;
+}
+/*# sourceMappingURL=styles.css.map */

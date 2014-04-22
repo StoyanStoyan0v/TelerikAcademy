@@ -1,0 +1,90 @@
+﻿body,
+div,
+ul,
+li,
+span,
+a,
+img {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: 'Courier New', Courier, 'Nimbus Mono L', monospace;
+  font-size: 16px;
+  color: #777;
+}
+body #wrapper {
+  width: 960px;
+}
+body #wrapper .notification-list {
+  position: relative;
+  width: 470px;
+  margin: 25px;
+  border: 1px solid #000;
+  border-bottom: none;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background: #aaaaaa;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #aaaaaa 0, #dddddd 80%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #aaaaaa), color-stop(80%, #dddddd));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #aaaaaa 0, #dddddd 80%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #aaaaaa 0, #dddddd 80%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #aaaaaa 0, #dddddd 80%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #aaaaaa 0, #dddddd 80%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@firstcolor', endColorstr='@secondcolor', GradientType=0);
+  /* IE6-9 */
+}
+body #wrapper .notification-list > li {
+  display: inline-block;
+  padding: 0 10px;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+body #wrapper .notification-list > li:last-of-type {
+  border-right: none;
+}
+body #wrapper .notification-list > li a {
+  color: #777;
+  text-decoration: none;
+  font-size: 1.2em;
+  display: block;
+  padding: 5px;
+}
+body #wrapper .notification-list > li a img {
+  width: 15px;
+  height: 15px;
+}
+body #wrapper .notification-list > li .content {
+  font-size: 0.9em;
+  width: 470px;
+  border: 1px solid #000;
+  display: none;
+  background-color: #ddd;
+  border-top: none;
+  position: absolute;
+  left: -1px;
+  top: 32px;
+}
+body #wrapper .notification-list > li .content ul {
+  list-style-type: none;
+}
+body #wrapper .notification-list > li .content a {
+  margin-left: 10px;
+}
+body #wrapper .notification-list > li .content a img {
+  margin-right: 5px;
+}
+body #wrapper .notification-list > li:hover {
+  border-bottom: none;
+}
+body #wrapper .notification-list > li:hover .content {
+  display: block;
+}
+/*# sourceMappingURL=task2.css.map */

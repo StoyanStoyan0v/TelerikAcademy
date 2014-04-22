@@ -1,0 +1,106 @@
+﻿body,
+html,
+div,
+ul,
+li,
+a,
+span {
+  margin: 0;
+  padding: 0;
+}
+body {
+  color: #0094ff;
+  font-size: 16px;
+  font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'DejaVu Sans Condensed', sans-serif;
+}
+body #wrapper {
+  width: 960px;
+}
+body #wrapper .msg-bar {
+  width: 560px;
+  margin: 200px 50px;
+  position: relative;
+  display: inline-block;
+}
+body #wrapper .msg-bar > li {
+  padding-top: 5px;
+  display: inline-block;
+}
+body #wrapper .msg-bar > li .msg-bar-btn {
+  border: 1px solid #000;
+  display: inline-block;
+  padding: 5px 15px;
+  color: #0094ff;
+  text-decoration: none;
+  background: #aaffef;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #aaffef 0, #20ffd5 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #aaffef), color-stop(100%, #20ffd5));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #aaffef 0, #20ffd5 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #aaffef 0, #20ffd5 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #aaffef 0, #20ffd5 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #aaffef 0, #20ffd5 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@firstcolor', endColorstr='@secondcolor', GradientType=0);
+  /* IE6-9 */
+}
+body #wrapper .msg-bar > li .msg-bar-content {
+  display: none;
+  position: absolute;
+  bottom: 35px;
+  left: 0;
+  width: 430px;
+  padding: 5px 15px;
+  background: #aaffef;
+  border: 1px solid #000;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom: none;
+}
+body #wrapper .msg-bar > li .msg-bar-content ul {
+  list-style-type: none;
+  text-align: right;
+  color: #0094ff;
+}
+body #wrapper .msg-bar > li .msg-bar-content ul li {
+  margin-top: 5px;
+}
+body #wrapper .msg-bar > li .msg-bar-content ul li span {
+  display: block;
+  padding: 5px 15px;
+  margin-left: 100px;
+  border-bottom: 1px solid #000;
+  text-align: right;
+}
+body #wrapper .msg-bar > li .msg-bar-content ul li span.user {
+  border: 1px solid black;
+  border-radius: 100px;
+  float: left;
+  padding-left: 25px;
+  background-position: 5px center;
+  background-repeat: no-repeat;
+  margin: 0;
+}
+body #wrapper .msg-bar > li .msg-bar-content ul li:last-of-type span:not(.user) {
+  border: none;
+}
+body #wrapper .msg-bar > li .msg-bar-content ul li.me-item span.user {
+  background-image: url(imgs/me.png);
+  background-repeat: no-repeat;
+}
+body #wrapper .msg-bar > li .msg-bar-content ul li.other-item span.user {
+  background-image: url(imgs/male.png);
+}
+body #wrapper .msg-bar > li:hover .msg-bar-btn {
+  border-top: 5px solid #aaffef;
+  background: #00ddb3;
+}
+body #wrapper .msg-bar > li:hover .msg-bar-content {
+  display: block;
+}
+/*# sourceMappingURL=task1.css.map */

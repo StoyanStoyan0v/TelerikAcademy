@@ -1,0 +1,159 @@
+﻿body,
+h1,
+h2,
+nav,
+aside,
+section,
+ul,
+li,
+p {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+body {
+  padding: 1px;
+  width: 850px;
+  background-color: #f1f1f1;
+  font: 12px/1.2 Verdana, sans-serif;
+}
+body .clearfix {
+  zoom: 1;
+}
+body .clearfix:after {
+  display: block;
+  content: "";
+  height: 0;
+  clear: both;
+}
+body ul {
+  list-style-type: none;
+}
+body h2 {
+  font-size: 1.1em;
+  color: #ffffff;
+  background-color: #808080;
+  padding-left: 1%;
+  font-weight: normal;
+}
+body > header {
+  width: 18%;
+  float: left;
+}
+body > header h1 {
+  margin: 10% 0 0 0;
+}
+body > header h1 a {
+  display: inline-block;
+  font-size: 0.5em;
+  color: #000000;
+  text-decoration: none;
+}
+body > header h1 img {
+  width: 2em;
+  height: 2em;
+  float: left;
+  margin-top: -10%;
+  margin-bottom: 10%;
+}
+body > header ul {
+  margin-bottom: 5%;
+}
+body > header ul li a {
+  text-decoration: none;
+  color: #000000;
+}
+body > header ul li:first-child > a {
+  color: #900b09;
+  font-weight: bold;
+}
+body > header ul li:hover {
+  text-decoration: underline;
+}
+body section {
+  display: inline-block;
+  border: 1px solid #808080;
+  background-color: #ffffff;
+  padding: 4px;
+  width: 56%;
+}
+body section h1 {
+  margin: 2% 0;
+}
+body section button {
+  position: relative;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  width: 19%;
+  text-align: center;
+}
+body section button span.left {
+  position: absolute;
+  left: 0;
+}
+body section button span.right {
+  position: absolute;
+  right: 0;
+}
+body section hr {
+  border: 1px solid #808080;
+}
+body section hr:last-of-type {
+  margin-bottom: 8%;
+}
+body section article {
+  padding: 1% 0;
+  margin-bottom: 2%;
+}
+body section article:first-of-type {
+  font-weight: bold;
+  margin-bottom: 5%;
+}
+body section article img {
+  float: left;
+  margin-right: 3%;
+}
+body section article p {
+  margin: 2% 0;
+}
+body section article a {
+  zoom: 1;
+  color: #900b09;
+  font-weight: normal;
+}
+body section article a:after {
+  display: block;
+  content: "";
+  height: 0;
+  clear: both;
+}
+body aside {
+  width: 24%;
+  float: right;
+}
+body aside ul {
+  border: 1px solid #808080;
+  margin-bottom: 1%;
+}
+body aside ul li {
+  background-color: #ffffff;
+  text-align: center;
+}
+body aside ul li:last-of-type {
+  padding-bottom: 4%;
+}
+body aside ul li a {
+  color: #900b09;
+}
+body aside ul li a:hover {
+  color: #000000;
+}
+body aside .last {
+  border: 0;
+}
+body aside .last li {
+  border: 1px solid #808080;
+  margin-bottom: 1%;
+  padding: 2%;
+}
+/*# sourceMappingURL=styles.css.map */

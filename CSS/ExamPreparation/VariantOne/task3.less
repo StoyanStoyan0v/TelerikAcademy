@@ -1,0 +1,108 @@
+﻿html, body, div, h1, ul, li, span, input, button {
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 960px;
+    font-family: Cambria, 'Times New Roman', 'Nimbus Roman No9 L', 'Freeserif', Times, serif;
+    font-size: 16px;
+    color: #555555;
+    .linear-gradient(@from-color, @from-pos, @to-color, @to-pos) {
+        background: @from-color;
+        background: -moz-linear-gradient(top, @from-color @from-pos, @to-color @to-pos); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(@from-pos, @from-color), color-stop(@to-pos, @to-color)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, @from-color @from-pos, @to-color @to-pos);
+        background: -o-linear-gradient(top, @from-color @from-pos, @to-color @to-pos);
+        background: -ms-linear-gradient(top, @from-color @from-pos, @to-color @to-pos);
+        background: linear-gradient(to bottom, @from-color @from-pos, @to-color @to-pos); 
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@{from-color}', endColorstr='@{to-color}',GradientType=0 );
+    }
+    .clearfix {
+        zoom: 1;
+        &:after {
+            content: "";
+            height: 0;
+            display: block;
+            clear: both;
+        }
+    }
+    #wrapper {
+        margin: 30px 0 0 30px;
+        width: 350px;
+        border: 1px solid #000;
+        border-radius: 15px;
+        padding: 5px 15px;
+        .linear-gradient(#ededed, 0, #aaa, 100%);
+        h1 {
+            text-align: center;
+            font-size: 1.8em;
+            margin: 10px 5px;
+        }
+        ul {
+            list-style-type: none;
+            li {
+                border: 1px solid #000;
+                border-radius: 15px;
+                border-collapse: collapse;
+                width: 200px;
+                margin-bottom: 5px;
+                padding: 5px 15px;
+                p {
+                    text-align: justify;
+                    margin: 0;
+                    padding: 0;
+                }
+                span {
+                    font-weight: bold;
+                    font-size: 1.1em;
+                    margin: 0;
+                    padding: 0;
+                    display: block;
+                    &.date {
+                        font-weight: normal;
+                        font-family: Consolas;
+                        font-size: 0.8em;
+                    }
+                }
+                &.me-item {
+                    float: right;
+                    .linear-gradient(#2dedff, 0, #BDFAFF, 100%);
+                    span {
+                        text-align: left;
+                        &.date {
+                            text-align: right;
+                        }
+                    }
+                }
+                &.toshko-item {
+                    float: left;
+                    .linear-gradient(#d9ffcb, 0, #77ff46, 100%);
+                    span {
+                        text-align: right;
+                        &.date {
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+
+            .clearfix;
+        }
+        input {
+            padding: 10px;
+            width: 250px;
+            border-radius: 5px;
+            border: none;
+        }
+        button {
+            padding: 5px 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            .linear-gradient(#ebebeb, 0, #b5b5b5, 100%);
+            &:hover {
+                background: #fff;
+            }
+        }
+    }
+}

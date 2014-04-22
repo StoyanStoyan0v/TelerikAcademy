@@ -1,0 +1,58 @@
+﻿html, body, div, h1, img, p {
+    margin: 0;
+    padding: 0;
+}
+body {
+
+
+    .linear-gradient(@firstcolor, @firstpercent, @secondcolor, @secondpercent) {
+        background: @firstcolor; /* Old browsers */
+        background: -moz-linear-gradient(top, @firstcolor @firstpercent, @secondcolor @secondpercent); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(@firstpercent, @firstcolor), color-stop(@secondpercent, @secondcolor)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, @firstcolor @firstpercent, @secondcolor @secondpercent); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top, @firstcolor @firstpercent, @secondcolor @secondpercent); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top, @firstcolor @firstpercent, @secondcolor @secondpercent); /* IE10+ */
+        background: linear-gradient(to bottom, @firstcolor @firstpercent, @secondcolor @secondpercent); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@firstcolor', endColorstr='@secondcolor',GradientType=0 ); /* IE6-9 */              
+    }
+
+    font-family: Constantina, Georgia, 'Nimbus Roman No9 L', serif;
+    font-size: 16px;
+    #wrapper {
+        width: 960px;
+        div {
+            width: 933px;
+            .linear-gradient(#de28ff, 25%, #f9dbff, 75%);
+            border: 1px solid #000;
+            border-radius: 15px;
+            margin: 25px;
+            padding:15px 0 10px;
+            .left-arrow {
+                position: relative;
+                float: left;
+                top: 30px;
+            }
+            .right-arrow {
+                float: right;
+                position: relative;
+                top: 30px;
+            }
+            h1 {
+                padding-left: 35px;
+                font-size: 1.8em;
+            }
+            p {
+                margin: 0 35px 20px 35px;
+                text-align: justify;
+                &.postedby {
+                    border-top: 1px solid #000;
+                    border-bottom: 1px solid #000;
+                    margin-left: 50px;
+                    margin-top: 5px;
+                    width: 370px;
+                    padding: 5px 15px;
+                }
+            }
+        }
+    }
+}

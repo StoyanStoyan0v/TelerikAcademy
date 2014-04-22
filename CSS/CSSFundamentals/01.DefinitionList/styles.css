@@ -1,0 +1,41 @@
+﻿body
+{
+    background-color: dimgray;
+}
+
+td
+{
+    color: white;
+    vertical-align: text-top;
+    line-height: 200%;
+}
+img
+{
+    width: 13px;
+    height: 13px;
+    margin-right:4px;
+}
+.left
+{
+    font-style: italic;
+    color: #798188;
+}
+.lightgray
+{
+    color: #A7A7A7;
+}
+thead
+{
+    text-align: left;
+    font-size: 20px;
+    font-style: normal;
+    color: #A7A7A7;
+}
+#orange
+{
+    color: orangered;
+}
+#red
+{
+    color: red;
+}

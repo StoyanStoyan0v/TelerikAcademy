@@ -1,0 +1,32 @@
+﻿ul {
+    list-style-type: none;
+}
+    ul li {
+        border: 1px solid #808080;
+        border-bottom: 0px;
+        text-decoration: none;
+        width: 100px;
+        position:relative;
+    }
+        ul li:hover>a {
+            background-color: #808080;
+        }
+            ul li:hover > a + ul {
+                display: block;
+            }
+                ul li a{
+                    display:inline-block;
+                    width:100px;
+                    text-decoration:none;
+                }
+li:last-child {
+    border-bottom: 1px solid #808080;
+}
+.sublist {
+    display: none;
+    position:absolute;
+    left:60px;
+    top:0;
+}
+
+

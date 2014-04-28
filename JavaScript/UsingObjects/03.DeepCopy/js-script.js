@@ -1,27 +1,9 @@
-﻿Array.prototype.isArray = true;
+﻿var ObjectCopier = function () {
+    this.deepCopy = function (object) {
 
-var ObjectCopier = function () {
-    var self = this; //this variable allow to access the public method inside the private one
-
-    var copyArray = function(arr) { //private function
-        var tempArr = [];
-        for (var i = 0; i < arr.length; i++) {
-            if (typeof (arr[i]) === "object" && arr[i].isArray) {
-                tempArr.push(copyArray(arr[i]));
-            } else if (typeof (arr[i]) === "object") {
-                tempArr.push(self.deepCopy(arr[i]))
-            } else {
-                tempArr.push(arr[i]);
-            }
-        }
-        return tempArr;
-    }
-    
-    this.deepCopy = function (object) { //public function
         var tempCopy = {};
-        if (typeof (object) === "object" && object.isArray) {
-            tempCopy = copyArray(object);
-        } else if (typeof(object)==="object") {
+
+        if (typeof(object)==="object") {
             for (prop in object) {
                 tempCopy[prop] = this.deepCopy(object[prop]);
             }
@@ -51,5 +33,5 @@ document.writeln("someObject.object.a: " + oldObject.object.a + "<br/>");
 document.writeln("someObject.object.array: " + oldObject.object.array + "<br/> <br/>");
 
 document.writeln("<strong>newObject.object properties (copied from the old object before being changed):</strong> <br/>");
-document.writeln("newObject.x: " + newObject.object.x + "<br/>");
-document.writeln("newObject.arr: " + newObject.object.arr);
+document.writeln("newObject.object.x: " + newObject.object.x + "<br/>");
+document.writeln("newObject.object.arr: " + newObject.object.arr);

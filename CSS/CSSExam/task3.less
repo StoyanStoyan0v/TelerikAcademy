@@ -1,0 +1,85 @@
+﻿body {
+    font-size: 18px; 
+    font-family: Arial
+}
+.linear-gradient(@firstcolor, @firstpercent, @secondcolor, @secondpercent) {
+    background: @firstcolor; /* Old browsers */
+    background: -moz-linear-gradient(top, @firstcolor @firstpercent, @secondcolor @secondpercent); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(@firstpercent, @firstcolor), color-stop(@secondpercent, @secondcolor)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, @firstcolor @firstpercent, @secondcolor @secondpercent); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, @firstcolor @firstpercent, @secondcolor @secondpercent); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, @firstcolor @firstpercent, @secondcolor @secondpercent); /* IE10+ */
+    background: linear-gradient(to bottom, @firstcolor @firstpercent, @secondcolor @secondpercent); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@firstcolor', endColorstr='@secondcolor',GradientType=0 ); /* IE6-9 */              
+}
+#root {
+    width: 610px;
+    padding: 5px;
+    color: #2aa0bd;
+    h1 {
+        text-align: center; 
+        margin-bottom: 20px;
+        font-style: italic;
+    }
+    .chat-container {
+        .linear-gradient(#4ae871, 0, #f1ffbc, 100%);
+        display: inline-block;
+        width: 300px;
+        height: 500px;
+        border: 1px solid gray;
+        border-collapse: collapse;
+        border-radius: 5px; 
+        position: relative; 
+        overflow:auto;
+        h2 {
+            text-align: center;
+            margin: 20px 0 35px 0;
+        }
+        .messages {
+            padding: 15px;
+            ul {
+                list-style-type: none;
+                strong {
+                    font-weight: normal;
+                    font-style: italic;
+                }
+                span {
+                    display: block;
+                }
+                .other {
+                    text-align: right;
+                }
+                li {
+                    border-bottom: 1px solid #000;
+                    &:last-of-type {
+                        border-bottom: none;
+                    }
+                }
+            }            
+        }
+        .sent-message {
+            position: absolute;
+            bottom: 0;
+            margin-left: 5px;
+            input, button {
+                font-size: 1em;
+                padding: 5px 15px;
+                border: 1px solid gray;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                border-collapse: collapse; 
+            }
+            input {
+                width: 170px;
+            }
+            button {
+                color: #2aa0bd;
+                .linear-gradient(#4ae871, 0, #f1ffbc, 100%);
+            }
+        }
+    }
+}
+html, body, div, h1, h2, ul, li, input, button {
+    margin: 0;
+    padding: 0;
+}

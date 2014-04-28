@@ -1,0 +1,86 @@
+﻿html, body, ul, li, a, div, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+.linear-gradient(@firstcolor, @firstpercent, @secondcolor, @secondpercent) {
+    background: @firstcolor; /* Old browsers */
+    background: -moz-linear-gradient(top, @firstcolor @firstpercent, @secondcolor @secondpercent); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(@firstpercent, @firstcolor), color-stop(@secondpercent, @secondcolor)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, @firstcolor @firstpercent, @secondcolor @secondpercent); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, @firstcolor @firstpercent, @secondcolor @secondpercent); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, @firstcolor @firstpercent, @secondcolor @secondpercent); /* IE10+ */
+    background: linear-gradient(to bottom, @firstcolor @firstpercent, @secondcolor @secondpercent); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@firstcolor', endColorstr='@secondcolor',GradientType=0 ); /* IE6-9 */              
+}
+
+body {
+    font-family: 'Courier New', Courier, 'Nimbus Mono L', monospace;
+    font-size: 16px;
+    #wrapper {
+        width: 960px;
+        .menu {
+            width: 400px;
+            list-style-type: none;
+            padding:0 5px;
+            &>li {
+                display: inline-block;
+                border: 1px solid black;
+                border-radius: 10px;
+                padding: 10px 20px;
+                margin-top:5px;
+                position: relative;
+                .linear-gradient(#25DCF2, 0, #7994e2, 100%);
+                a {
+                    text-decoration: none;
+                }
+                .content {
+                    .linear-gradient(#ffffff, 0, #a1d8ef, 100%);
+                    display: none;
+                    position: absolute;
+                    left: 20px;
+                    border: 1px solid black;
+                    border-radius: 10px;
+                    padding: 15px;
+                    width: 280px;
+                    font-size: 0.7em;
+                    
+                    h3 {
+                        font-size: 1.1em;
+                        font-weight: bold;
+                        text-decoration: underline;
+                        margin: 15px 0;
+                    }
+                    p {
+                        margin-bottom: 15px;
+                        a {
+                            text-decoration: none;
+                        }
+                        .bold {
+                            font-weight: bold;
+                        }
+                    }
+                    ul {
+                        margin-left: 5px;
+                        list-style-type: square;
+                        a {
+                            text-decoration: none;
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+                &:hover {
+                    font-size: 1.5em;
+                    padding-left:45px;
+                    padding-right:45px;
+                    .content {
+                        display: block;
+                        z-index: 3;
+                    }
+                }
+            }
+        }
+    }
+}

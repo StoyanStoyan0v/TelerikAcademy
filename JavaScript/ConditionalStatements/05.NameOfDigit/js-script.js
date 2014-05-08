@@ -1,8 +1,4 @@
-﻿function onChange(fieldname, input) {
-    document.getElementById(fieldname).value = input;
-}
-
-function getDigit() {
+﻿function getDigit() {
     var firstNum = parseInt(document.getElementById("digit").value);
     
     var result;
@@ -38,7 +34,7 @@ function getDigit() {
             result = "Zero!";
             break;
         default:
-            result = "Unknow digit!";
+            result = "Unknown digit!";
             break;
     }
     document.getElementById("result").value = result;

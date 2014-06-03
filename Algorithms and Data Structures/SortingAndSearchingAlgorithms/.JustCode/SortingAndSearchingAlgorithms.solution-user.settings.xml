@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<JustCodeSettings Version="0.0" Timestamp="b3a8886b-ae7c-4524-ac39-81a1aff3d5f0">
+  <IgnoredErrorsAndWarningsSettings xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+    <IgnoredErrorsAndWarnings Version="2">
+      <FilePath>
+        <FileRelativePath>SortingAlgorithmTests/Quicksorter.cs</FileRelativePath>
+        <ProjectRelativePath>SortingAlgorithmTests/SortingAlgorithmTests.csproj</ProjectRelativePath>
+        <IgnoredElement>
+          <TextualIdentifier>11483520901944960420</TextualIdentifier>
+        </IgnoredElement>
+      </FilePath>
+    </IgnoredErrorsAndWarnings>
+  </IgnoredErrorsAndWarningsSettings>
+</JustCodeSettings>

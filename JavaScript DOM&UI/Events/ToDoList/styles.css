@@ -1,0 +1,28 @@
+﻿#task {
+    width: 300px;
+    height: 100px;
+    border-radius:5px;
+}
+#to-do-list {
+    width: 300px;
+    height: 400px;
+    resize: none;
+    border-radius: 5px;
+    border:1px solid #ff0000;
+    background:#facfcf;
+    display:block;
+    overflow:auto;
+}
+
+input{
+    margin:10px;
+    border:1px solid #ff0000;
+    background:#facfcf;
+}
+
+input:hover{
+    opacity: 0.5;
+}
+label{
+    font-size:20px;
+}

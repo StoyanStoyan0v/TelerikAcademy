@@ -5,9 +5,9 @@
         height: 700
     });
 
-    var layer = new Kinetic.Layer();
-
-    var imageObj = new Image();
+    var layer = new Kinetic.Layer(),
+		imageObj = new Image(),
+		direction = "right";
 
     imageObj.onload = function () {
         var mario = new Kinetic.Sprite({
@@ -50,26 +50,31 @@
         window.addEventListener('keydown', onKeyDown);
         window.addEventListener('keyup', onKeyUp);
 
-
-        
-        // Moving
         function moveLeft() {
-            mario.setX(mario.attrs.x -= 10);
-            mario.scaleX(-2);
-            mario.attrs.animation = "move";
+            if (direction === 'left') {
+                mario.setX(mario.attrs.x -= 10);
+                mario.scaleX(-2);
+                mario.attrs.animation = "move";
+            } else {
+                mario.setX(mario.attrs.x += 50);
+                mario.scaleX(-2);
+                direction = 'left';
+                mario.attrs.animation = "move";
+            }
+
         }
 
         function moveRight() {
-            mario.setX(mario.attrs.x += 10);
-            mario.scaleX(2);
-            mario.attrs.animation = "move";
-        }
-
-        function stop(pos) {
-            mario.setX(mario.attrs.x = pos);
-            mario.animation('idle');
-            mario.scaleX(2);
-            frameCount = 0;
+            if (direction === 'right') {
+                mario.setX(mario.attrs.x += 10);
+                mario.scaleX(2);
+                mario.attrs.animation = "move";
+            } else {
+                mario.setX(mario.attrs.x -= 50);
+                mario.scaleX(2);
+                direction = 'right';
+                mario.attrs.animation = "move";
+            }
         }
  
         function onKeyDown(evt) {

@@ -1,0 +1,31 @@
+
+#container{
+    border:1px solid black;
+    height: 529px;
+    width: 1150px;
+    border-radius: 10px;
+}
+img {
+    border-radius: 10px;
+    display: none;
+
+}
+.arrow {
+    width: 100px;
+    height: 100px;
+    display: inline;
+    padding-top: 200px;
+}
+#right-arrow{
+    float: right;
+}
+.slider{
+    position: absolute;
+}
+.arrow:hover{
+    opacity: 0.5;
+}
+
+.selected{
+    display:inline;
+}

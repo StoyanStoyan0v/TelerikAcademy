@@ -1,0 +1,15 @@
+table,th,thead,tr,td{
+    border: 1px solid black;
+}
+table{
+    border-collapse: collapse;
+}
+table tr:nth-child(2n+1){
+    background: lightgray;
+}
+th{
+    background: gray;
+    color: white;
+    text-align: center;
+}
+

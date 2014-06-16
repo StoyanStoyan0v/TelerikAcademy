@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Table</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/handlebars/handlebars.js"></script>
+    <script src="template.js"></script>
+</head>
+<body>
+<table id="table-container">
+</table>
+<script id="table-template" type="text/x-handlebars-template">
+        <tr>
+            <th>№</th>
+            <th>Title</th>
+            <th>Date #1</th>
+            <th>Date #2</th>
+        </tr>
+
+        {{#each table}}
+        <tr>
+            <td>{{num}}</td>
+            <td>{{title}}</td>
+            <td>{{date1}}</td>
+            <td>{{date2}}</td>
+        </tr>
+        {{/each}}
+</script>
+</body>
+</html>

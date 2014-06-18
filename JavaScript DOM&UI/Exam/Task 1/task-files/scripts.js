@@ -33,6 +33,7 @@ function createImagesPreviewer(selector, items) {
         sidebar.style.overflow = 'auto';
         sidebar.style.float='right';
         sidebar.style.paddingLeft = '20px';
+		sidebar.style.display='inline-block';
         filter.type = 'text';
         filter.style.marginLeft='15px';
         filterHeader.innerHTML='Filter';

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="game-engine.js"></script>
+    <script src="game-objects.js"></script>
+    <script src="collision-detector.js"></script>
+
+</head>
+<body>
+<canvas id="canvas-container" width="800" height="600"></canvas>
+
+<script src="renderer.js"></script>
+<script>
+
+    var game = new SnakeGame();
+    game.start();
+</script>
+</body>
+</html>

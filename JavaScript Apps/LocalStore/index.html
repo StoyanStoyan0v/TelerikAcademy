@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Sheep and Rams</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="game.js"></script>
+</head>
+<body>
+
+    <div id="container">
+        <h2 id="msg">Sheep and Rams Game</h2>
+        <div id="number-container">
+            <input type="text" id="number"/>
+            <br/>
+            <input type="button" value="Check" id="check-btn"/>
+            <p id="sheep"></p>
+            <p id="rams"></p>
+        </div>
+        <div id="name-container">
+            <input type="text" id="name"/>
+            <br/>
+            <input type="button" value="Submit" id="submit-btn"/>
+        </div>
+        <input type="button" value="Play" id="play-btn"/>
+        <input type="button" id="clear-btn" value="Clear Scores"/>
+        <div id="high-scores">
+            <h4>HIGH SCORES</h4>
+            <div id="scores"></div>
+        </div>
+    </div>
+</body>
+</html>

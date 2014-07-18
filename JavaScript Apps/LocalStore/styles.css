@@ -1,0 +1,61 @@
+#container{
+    width: 500px;
+    height: 500px;
+    border-radius: 20px;
+    background-color: #2dff75;
+    position: relative;
+
+}
+#high-scores {
+    float: right;
+    height: 300px;
+    width: 200px;
+    margin-right: 30px;
+    overflow: auto;
+    border: 1px solid royalblue;
+    padding: 20px;
+    border-radius: 10px;
+}
+#clear-btn{
+    margin-top: 300px;
+    margin-left: 50px;
+}
+h4{
+    padding-right: 50px;
+}
+input {
+    width: 150px;
+    height: 30px;
+    font-size: 20px;
+    margin-top: 10px;
+    color: darkblue;
+}
+h2 {
+    margin-left: 50px;
+}
+
+#number-container,#name-container,#play-btn {
+    position: absolute;
+    left:0;
+    top: 80px;
+    margin-left: 50px;
+}
+h2{
+    padding-top: 30px;
+    color: #ffc07f;
+}
+#check-btn,#submit-btn,#play-btn,#clear-btn{
+    border-radius: 20px;
+    background-color: #ff5f33;
+    color: #676dff;
+}
+#check-btn:hover,#submit-btn:hover,#play-btn:hover,#clear-btn:hover{
+    opacity: 0.7;
+
+}
+#number-container,#name-container{
+    display: none;
+}
+#sheep,#rams {
+    width: 200px;
+}

@@ -24,7 +24,7 @@ var Renderer= (function () {
         ctx.strokeStyle = strokeColor;
         ctx.fillStyle = fillColor;
         ctx.moveTo(cell.x + cell.r, cell.y);
-        ctx.arc(cell.x, cell.y, 20, 0, 2 * Math.PI);
+        ctx.arc(cell.x, cell.y, cell.r, 0, 2 * Math.PI);
         ctx.stroke();
         ctx.fill();
 

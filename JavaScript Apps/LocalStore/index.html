@@ -8,9 +8,16 @@
     <script src="game.js"></script>
 </head>
 <body>
-
     <div id="container">
-        <h2 id="msg">Sheep and Rams Game</h2>
+        <img id="left-img" src="images/White_Stupid_Cute_Cartoon_Sheep.png" alt="sheep"/>
+        <img id="right-img" src="images/ram.gif" alt="ram"/>
+        <h1 id="title">Sheep and Rams Game</h1>
+        <p id="info">Guess the number. Ram means you have guessed a digit's position and sheep  means that there is such digit but it is not in the right spot.</p>
+        <div id="high-scores">
+            <h4>HIGH SCORES</h4>
+            <div id="scores"></div>
+        </div>
+        <h2 id="msg"></h2>
         <div id="number-container">
             <input type="text" id="number"/>
             <br/>
@@ -25,10 +32,6 @@
         </div>
         <input type="button" value="Play" id="play-btn"/>
         <input type="button" id="clear-btn" value="Clear Scores"/>
-        <div id="high-scores">
-            <h4>HIGH SCORES</h4>
-            <div id="scores"></div>
-        </div>
     </div>
 </body>
 </html>

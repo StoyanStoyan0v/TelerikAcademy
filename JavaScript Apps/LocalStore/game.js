@@ -12,25 +12,37 @@
     function startGame() {
         $('#play-btn').hide('slow');
         $('#number-container').show('slow');
-        $('#msg').text('Enter four-digit number');
+        $('#msg').text('Guess the four-digit number');
+        $('#number').val('');
+        $('#name').val('');
         num = getRandomFourDigitNumber();
     }
 
     function checkNumber() {
-        var value = $('#number').val();
+        var value = $('#number').val(),
+        $sheep=$('#sheep'),
+        $rams=$('#rams');
         rams = getRams(value);
         sheep = getSheep(value);
 
         if (value < 1000) {
             $('#msg').text('Invalid count of digit');
+            $sheep.text('');
+            $rams.text('');
+            return;
+        }
+        else if(!isFinite(value)){
+            $('#msg').text('Only digits allowed.');
+            $sheep.text('');
+            $rams.text('');
             return;
         }
         else {
             $('#msg').text('Enter four-digit number');
         }
 
-        $('#sheep').text("Sheep: " + sheep);
-        $('#rams').text("Rams: " + rams);
+        $sheep.text("Sheep: " + sheep);
+        $rams.text("Rams: " + rams);
 
         if (rams === 4) {
             $('#number-container').hide('slow');
@@ -38,6 +50,7 @@
         }
         score += 1;
     }
+
 
     function getSheep(value) {
         var sheepCount=0;

@@ -1,10 +1,34 @@
 #container{
-    width: 500px;
-    height: 500px;
+    width: 550px;
+    height: 550px;
     border-radius: 20px;
     background-color: #2dff75;
     position: relative;
 
+}
+img{
+    padding: 20px;
+    width: 70px;
+    height: 60px;
+}
+
+#left-img{
+    float: left;
+}
+#right-img{
+    float: right;
+}
+#title{
+    text-align: center;
+    font-weight: bold;
+}
+p{
+    font-size:20px;
+    color: #0640ff;
+    font-weight: bold;
+}
+#info{
+    padding:0 50px;
 }
 #high-scores {
     float: right;
@@ -13,15 +37,16 @@
     margin-right: 30px;
     overflow: auto;
     border: 1px solid royalblue;
-    padding: 20px;
     border-radius: 10px;
 }
 #clear-btn{
-    margin-top: 300px;
+    margin-top: 200px;
     margin-left: 50px;
+	cursor:pointer;
 }
 h4{
-    padding-right: 50px;
+    color: #ff0200;
+    padding-left: 50px;
 }
 input {
     width: 150px;
@@ -36,26 +61,40 @@ h2 {
 
 #number-container,#name-container,#play-btn {
     position: absolute;
-    left:0;
-    top: 80px;
+    top: 300px;
     margin-left: 50px;
+	
 }
-h2{
-    padding-top: 30px;
+h2,h1{
+    padding-top: 50px;
     color: #ffc07f;
+}
+h1{
+    color:#ff5f33;
 }
 #check-btn,#submit-btn,#play-btn,#clear-btn{
     border-radius: 20px;
     background-color: #ff5f33;
     color: #676dff;
+	cursor:pointer;
 }
 #check-btn:hover,#submit-btn:hover,#play-btn:hover,#clear-btn:hover{
-    opacity: 0.7;
+    opacity: 0.8;
+	color:gray;
 
 }
 #number-container,#name-container{
     display: none;
 }
+#clear-btn{
+    position: absolute;
+    bottom:10px;
+    left:300px;
+}
 #sheep,#rams {
     width: 200px;
+}
+#scores{
+    padding: 15px;
+    color: #841ea9;
 }

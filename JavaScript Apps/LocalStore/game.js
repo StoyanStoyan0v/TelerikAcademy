@@ -16,12 +16,12 @@
         $('#number').val('');
         $('#name').val('');
         num = getRandomFourDigitNumber();
-        while(hasRepetitiveDigit() ) {
+        while(hasRepetitiveDigit(num) ) {
             num = getRandomFourDigitNumber();
         }
     }
 
-    function hasRepetitiveDigit() {
+    function hasRepetitiveDigit(num) {
         var count= 0,
             numAsString=num.toString(),
             digitIndex;
@@ -48,7 +48,7 @@
         rams = getRams(value);
         sheep = getSheep(value);
 
-        if (value < 1234 || value> 9876) {
+        if (value < 1000 || value> 9999) {
             $('#msg').text('Invalid count of digit');
             $sheep.text('');
             $rams.text('');
@@ -60,6 +60,12 @@
             $rams.text('');
             return;
         }
+		else if(hasRepetitiveDigit(value)){
+			$('#msg').text('Enter number with different digits only');
+            $sheep.text('');
+            $rams.text('');
+            return;
+		}
         else {
             $('#msg').text('Enter four-digit number');
         }

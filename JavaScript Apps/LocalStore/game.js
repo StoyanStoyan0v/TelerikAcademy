@@ -1,5 +1,5 @@
 (function () {
-    var num,
+    var num=0,
         score= 0,
         sheep=0,
         rams=0;
@@ -16,6 +16,29 @@
         $('#number').val('');
         $('#name').val('');
         num = getRandomFourDigitNumber();
+        while(hasRepetitiveDigit() ) {
+            num = getRandomFourDigitNumber();
+        }
+    }
+
+    function hasRepetitiveDigit() {
+        var count= 0,
+            numAsString=num.toString(),
+            digitIndex;
+
+        for (var i = 0; i < 4; i++) {
+            digitIndex = numAsString.indexOf(numAsString[i].toString());
+
+            while (digitIndex !== -1) {
+                count++;
+                digitIndex = numAsString.indexOf(numAsString[i], digitIndex + 1);
+            }
+            if(count>1){
+                return true;
+            }
+            count=0;
+        }
+        return false;
     }
 
     function checkNumber() {
@@ -25,7 +48,7 @@
         rams = getRams(value);
         sheep = getSheep(value);
 
-        if (value < 1000) {
+        if (value < 1234 || value> 9876) {
             $('#msg').text('Invalid count of digit');
             $sheep.text('');
             $rams.text('');

@@ -1,0 +1,51 @@
+input{
+    border-radius: 10px;
+    padding-left: 20px;
+}
+.msg-container{
+    text-align: center;
+    padding: 30px;
+}
+button{
+    background-color: greenyellow;
+    border: 1px solid green;
+    border-radius: 10px;
+    padding: 3px;
+    
+}
+button:hover{
+    opacity: 0.7;
+
+}
+.msg-container{
+    border-radius: 10px;
+    padding: 20px;
+    display: none;
+    width: 300px;
+}
+.success-msg{
+    border:1px solid green;
+    background: greenyellow;
+
+
+}
+.error-msg{
+    border:1px solid darkred;
+    background: red;
+
+}
+.chat-container{
+    margin:5px;
+    padding: 5px;
+    border: 1px solid blue;
+    background: cornflowerblue;
+    border-radius: 10px;
+    width:400px;
+}
+.msg{
+    padding: 5px;
+    border: 1px solid cornflowerblue;
+    background: blue;
+    margin-top:5px;
+    border-radius: 10px;
+}

@@ -9,19 +9,19 @@
     // Simple factory..
     public static class ComputerFactory
     {
-        public static Computer CreateLaptop(ComputerInfo info)
+        public static Laptop CreateLaptop(ComputerInfo info)
         {
             return new Laptop(info.Cpu, info.Memory, info.HardDrives, info.VideoCard);
         }
 
-        public static Computer CreatePC(ComputerInfo info)
+        public static PersonalComputer CreatePC(ComputerInfo info)
         {
-            return new Laptop(info.Cpu, info.Memory, info.HardDrives, info.VideoCard);
+            return new PersonalComputer(info.Cpu, info.Memory, info.HardDrives, info.VideoCard);
         }
 
-        public static Computer CreateServer(ComputerInfo info)
+        public static Server CreateServer(ComputerInfo info)
         {
-            return new Laptop(info.Cpu, info.Memory, info.HardDrives, info.VideoCard);
+            return new Server(info.Cpu, info.Memory, info.HardDrives, info.VideoCard);
         }
     }
 }

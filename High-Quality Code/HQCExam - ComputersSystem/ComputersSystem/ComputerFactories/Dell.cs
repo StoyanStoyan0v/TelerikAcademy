@@ -7,7 +7,7 @@
 
     public class Dell : Manufacturer
     {
-        public override Computer IntroducePC()
+        public override PersonalComputer IntroducePC()
         {
             var hddInfo = new[] { new HardDriver(1000) };
             var computerInfo = new ComputerInfo(8, hddInfo, 4, 64);
@@ -15,7 +15,7 @@
             return ComputerFactory.CreatePC(computerInfo);
         }
 
-        public override Computer IntroduceLaptop()
+        public override Laptop IntroduceLaptop()
         {
             var hddInfo = new[] { new HardDriver(1000) };
             var computerIfno = new ComputerInfo(8, hddInfo, 4, 32);
@@ -23,7 +23,7 @@
             return ComputerFactory.CreateLaptop(computerIfno);
         }
 
-        public override Computer IntroduceServer()
+        public override Server IntroduceServer()
         {
             var hddInfo = new[] { new HardDriver(0, new List<HardDriver> { new HardDriver(2000), new HardDriver(2000) }) };
             var computerIfno = new ComputerInfo(64, hddInfo, 8, 64);

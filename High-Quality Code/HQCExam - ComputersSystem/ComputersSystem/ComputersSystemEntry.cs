@@ -7,7 +7,9 @@
     {
         private static Manufacturer creator;
 
-        private static Computer pc, laptop, server;
+        private static PersonalComputer pc;
+        private static Laptop laptop;
+        private static Server server;
 
         public static void Main()
         {

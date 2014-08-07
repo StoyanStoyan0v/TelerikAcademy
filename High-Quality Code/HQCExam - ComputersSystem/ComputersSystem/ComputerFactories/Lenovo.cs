@@ -8,7 +8,7 @@
     
     public class Lenovo : Manufacturer
     {
-        public override Computer IntroducePC()
+        public override PersonalComputer IntroducePC()
         {
             var hddInfo = new[] { new HardDriver(2000) };
             var computerInfo = new ComputerInfo(4, hddInfo, 2, 64);
@@ -16,7 +16,7 @@
             return ComputerFactory.CreatePC(computerInfo);
         }
 
-        public override Computer IntroduceLaptop()
+        public override Laptop IntroduceLaptop()
         {
             var hddInfo = new[] { new HardDriver(1000) };
             var computerIfno = new ComputerInfo(16, hddInfo, 2, 64);
@@ -24,7 +24,7 @@
             return ComputerFactory.CreateLaptop(computerIfno);
         }
 
-        public override Computer IntroduceServer()
+        public override Server IntroduceServer()
         {
             var hddInfo = new[] { new HardDriver(0, new List<HardDriver> { new HardDriver(500), new HardDriver(500) }) };
             var computerIfno = new ComputerInfo(8, hddInfo, 2, 128);

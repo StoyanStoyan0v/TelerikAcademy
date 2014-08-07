@@ -18,5 +18,19 @@
             : base(cpu, memory, hardDrives, videoCard)
         {
         }
+
+          public void Play(int guessNumber)
+        {
+            this.Cpu.SaveRandomNumberToRam(1, 10);
+            var number = this.Memory.LoadValue();
+            if (number + 1 != guessNumber + 1)
+            {
+                this.VideoCard.Draw(string.Format("You didn't guess the number {0}.", number));
+            }
+            else
+            {
+                this.VideoCard.Draw("You win!");
+            }
+        }
     }
 }

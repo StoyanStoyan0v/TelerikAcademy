@@ -7,10 +7,10 @@
     {
         protected const int SIZE_BASE = 8;
 
-        public abstract Computer IntroduceLaptop();
+        public abstract Laptop IntroduceLaptop();
        
-        public abstract Computer IntroduceServer();
+        public abstract Server IntroduceServer();
         
-        public abstract Computer IntroducePC();
+        public abstract PersonalComputer IntroducePC();
     }
 }

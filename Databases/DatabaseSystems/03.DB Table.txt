@@ -1,0 +1,5 @@
+Database table:
+
+A table is a collection of related data held in a structured format within a database. It consists of fields (columns), and rows.[1]
+
+In relational databases and flat file databases, a table is a set of data elements (values) using a model of vertical columns (which are identified by their name) and horizontal rows, the cell being the unit where a row and column intersect.[2] A table has a specified number of columns, but can have any number of rows.[3] Each row is identified by the values appearing in a particular column subset which has been identified as a unique key index.

@@ -1,0 +1,22 @@
+Transaction:
+
+A transaction comprises a unit of work performed within a database management system (or similar system) against a database, and treated in a coherent and reliable way independent of other transactions. Transactions in a database environment have two main purposes:
+
+To provide reliable units of work that allow correct recovery from failures and keep a database consistent even in cases of system failure, when execution stops (completely or partially) and many operations upon a database remain uncompleted, with unclear status.
+To provide isolation between programs accessing a database concurrently. If this isolation is not provided, the program's outcome are possibly erroneous.
+
+
+
+Database Transaction Example:
+
+To understand database transaction better let's see a real life example of transaction in database. For this example we will assume we have an Account table which represent a Bank Account and we will transfer money from one account to another account
+
+Request: transfer 900$ from Account 9001 to 9002
+
+start transaction
+select balance from Account where Account_Number='9001';
+select balance from Account where Account_Number='9002';
+update Account set balance=balance-900 here Account_Number='9001' ;
+update Account set balance=balance+900 here Account_Number='9002' ;
+commit; //if all sql queries succed
+rollback; //if any of Sql queries failed or error

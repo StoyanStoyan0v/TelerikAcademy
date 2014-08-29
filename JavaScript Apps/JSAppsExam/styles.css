@@ -1,6 +1,17 @@
+body{
+    background: #e6ffb6;
+    font-size: 18px;
+}
+h2{
+    text-align: center;
+    color: #ff0000;
+}
 input{
     border-radius: 10px;
-    padding-left: 20px;
+    padding: 5px 20px;
+    background: #a5ffc5;
+    border: 1px solid #ffba3d;
+    font-size: 18px;
 }
 .msg-container{
     text-align: center;
@@ -10,7 +21,8 @@ button{
     background-color: greenyellow;
     border: 1px solid green;
     border-radius: 10px;
-    padding: 3px;
+    padding: 5px 10px;
+    font-size: 18px;
     
 }
 button:hover{
@@ -44,8 +56,8 @@ button:hover{
 }
 .msg{
     padding: 5px;
-    border: 1px solid cornflowerblue;
-    background: blue;
+    border: 1px solid #ed462c;
+    background: #f3ff75;
     margin-top:5px;
     border-radius: 10px;
 }

@@ -1,0 +1,37 @@
+RDBSM Functions:
+
+A relational DBMS is special system software that is used to manage the organization, storage, access, security and integrity of data.  This specialized software allows application systems to focus on the user interface, data validation and screen navigation.  When there is a need to add, modify, delete or display data, the application system simply makes a "call" to the RDBMS.
+
+Although there are many different types of database management systems, relational databases are by far the most common.  Other types include hierarchical databases and network databases. 
+
+Although database management systems have been around since the 1960s, relational databases didn't become popular until the 1980s when the power of the computer skyrocketed and it became feasible to store data is sets of related tables and provided real-time data access.
+
+functions:
+
+ getConnectionStatus()
+ setCurrentConnection()
+ unsetConnection()
+ 
+ beginTransaction()
+ commit()
+ rollback()
+ 
+ insert()
+ update()
+ delete()
+ 
+ queryUsingConceptProps()
+ queryUsingPreparedStmt()
+ queryUsingPrimaryKeys()
+ queryUsingSQL()
+ assertDBInstance()
+ 
+ executePreparedStmt()
+ executeSQL()
+ 
+ createQuery()
+ closeQuery()
+ getNextPage()
+ getNextPageFromOffset()
+ getPreviousPage()
+ getPreviousPageFromOffset()

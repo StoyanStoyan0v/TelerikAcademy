@@ -1,0 +1,14 @@
+Flat file
+ - CSV or other delimited data
+ - spreadsheets 
+ - /etc/passwd
+ - mbox mail files
+Hierarchical
+ - Windows Registry
+ - Subversion using the file system, FSFS, instead of Berkley DB
+
+Essentially, an associative database allows you to store information in much the same way as our brains do: as things and associations between those things. The name "Sentences" comes from the way this information can be represented in a subject-verb-object syntax:
+
+Tom is brother to Laura
+San Francisco is located in California
+Mike has a credit limit of $10,000

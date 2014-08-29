@@ -1,0 +1,18 @@
+Pros and cons of indexes:
+
+If indexes are used, writing to table (for example inserting rows) is
+slower, because in addition to just writing the data, MySQL needs to
+handle the index file also. This is an issue usually only if you need
+very fast inserts or you need to insert thousands of rows at the same
+time and fast.
+
+They might increase query speed or they might not. Basic rule is that if
+you are searching some specific key in a table, using indexes in that
+field will make query faster, but if you have index in some other field,
+it won't make a difference.
+
+You will get a lot faster results if you have index in the id field.
+
+On the other hand, if you don't have index in the id, but only in the
+name field, the query will be as slow (or even few cpu ticks slower)
+than it would be without indexes at all.

@@ -1,0 +1,9 @@
+Schema normalization:
+
+Database normalization is the process of organizing the fields and tables of a relational database to minimize redundancy. Normalization usually involves dividing large tables into smaller (and less redundant) tables and defining relationships between them. The objective is to isolate data so that additions, deletions, and modifications of a field can be made in just one table and then propagated through the rest of the database using the defined relationships.
+
+Advantages:
+ - Free the database of modification anomalies
+ - Minimize redesign when extending the database structure
+ - Make the data model more informative to users
+ - Avoid bias towards any particular pattern of querying

@@ -1,0 +1,9 @@
+NoSQL databases vary widely in regard to data models and query APIs: (Respective Links: Thrift, map/reduce views, Thrift, Cursor, Graph, Collection, Nested hashes, get/put, get/put, get/put)
+
+Here are some highlights:
+
+ - With the columnfamily model, you have rows and columns like you would expect, but the rows are sparse, meaning each row can have as many or as few columns as desired, and columns do not need to be defined ahead of time.
+ - The Key/value model is simple and easy to implement, but it is inefficient when you are only interested in querying or updating part of a value. It’s also difficult to implement more-sophisticated structures on top of distributed key/value.
+ - With Document databases, you get essentially the next level of Key/value, allowing nested values associated with each key. Document databases support querying those more efficiently than simply returning the entire blob each time.
+ - Neo4J uses the unique Graph data model, storing objects and relationships as nodes and edges in a graph. For queries that fit this model (e.g., hierarchical data), they can be thousands of times faster than alternatives.
+ - Unlike the others, Scalaris offers distributed transactions across multiple keys. There are, however, trade-offs between consistency and availability that you should keep in mind.

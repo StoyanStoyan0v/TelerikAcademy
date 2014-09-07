@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<bullshit:students name=".NET Developer's Library" xmls:students="urn:students"
+	xmlns:student="http://sdasd.com">
+  <student:student>
+    <student:name>Pesho Ivanov</student:name>
+    <student:sex>female</student:sex>
+    <student:birth-date>30.02.681</student:burth-date>
+	<student:phone>+359888123123</student:phone>
+	<student:email>pesho@shemale.com</student:email>
+	<student:course>3</student:course>
+	<student:specialty>Sexology</student:specialty>
+	<student:faculty-number>691235</student:faculty-number>
+	<student:taken-exams>
+		<student:exam>
+			<name>Some exam</name>
+			<tutor>Stamat Strashniya</tutor>
+			<score>3</score>
+		</student:exam>
+		<student:exam>
+			<name>Some other exam</name>
+			<tutor>Besniya Elen</tutor>
+			<score>4</score>
+		</student:exam>
+	</student:taken-exams>
+  </student:student>
+  <student:student>
+    <student:name>Azis</student:name>
+    <student:sex>Unknown</student:sex>
+    <student:birth-date>Yesterday</student:birth-date>
+	<student:phone>+359888000000</student:phone>
+	<student:email>vasko@gay.com</student:email>
+	<student:course>2</student:course>
+	<student:specialty>How to be ugly one</student:specialty>
+	<student:faculty-number>5123561</student:faculty-number>
+	<student:taken-exams>
+		<exam>
+			<name>Grachene</name>
+			<tutor>Mitko Maynera</tutor>
+			<score>6</score>
+		</exam>
+		<exam>
+			<name>Prostotiya</name>
+			<tutor>Na Mitko Maynera brat mu</tutor>
+			<score>6581923781</score>
+		</exam>
+	</student:taken-exams>
+  </student:student>
+</bullshit:students>

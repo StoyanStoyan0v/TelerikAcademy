@@ -1,0 +1,29 @@
+Connection string for "Company" database: 
+Company.Data/Company.DataGeneratorClient app.config -> <connectionStrings> tag
+
+Connection string for "Cars" database: Cars.ConsoleClient->
+app.config -> <connectionStrings> tag... using . to connect to database (CarsConnection)
+added one more connection string for express pass CarsConnectionExpress instead of CarsConnection with to the base constructor of the CarsDataDbContext class...
+
+
+Relationships for "Company" database:
+Employees : Departamanets -> one-to-many
+Employees : Projects -> many-to-many
+Employees : Employees -> one-to-many
+Employees : Reports -> one-to-many
+
+
+Relationships for "Cars" database:
+Cars : Manufacturers -> one-to-many
+Cars: Dealers -> one-to-many
+Dealers: Cities -> one-to-many
+
+
+
+Query files: 
+SQL Queries: Company -> Queries folder
+XML Queries : Cars.ConsoleClient
+XML Reports : Cars.ConsoleClient -> XMLReports
+JSON Files : Cars.ConsoleClient - > JSON
+
+Caching proecdure - into the solution folder... (Copied from the internet entirely :D )

@@ -1,10 +1,11 @@
-﻿using System;
-using System.Linq;
-using System.Xml.Linq;
-using Cars.Models;
-
-namespace Cars.Controllers
+﻿namespace Cars.Controllers
 {
+    using System;
+    using System.Linq;
+    using System.Xml.Linq;
+
+    using Cars.Models;
+
     public class XmlController
     {
         public void CreateReports(string filePath)
@@ -29,7 +30,7 @@ namespace Cars.Controllers
                     
                     if (int.TryParse(condition, out number))
                     {
-                        cars = this.Filter(cars, type, number);
+                        cars = this.Filter(cars, property, type, number);
                     }
                     else
                     {
@@ -99,9 +100,9 @@ namespace Cars.Controllers
             return cars;
         }
 
-        private IQueryable<Car> Filter(IQueryable<Car> cars, string type, int condition)
+        private IQueryable<Car> Filter(IQueryable<Car> cars, string property, string type, int condition)
         {
-            switch (type)
+            switch (property)
             {
                 case "Id":
                     switch (type)
@@ -112,7 +113,7 @@ namespace Cars.Controllers
                         case "GreaterThan":
                             cars = cars.Where(c => c.Id > condition);
                             break;
-                        case "LesserThan":
+                        case "LessThan":
                             cars = cars.Where(c => c.Id < condition);
                             break;
                         default:
@@ -128,7 +129,7 @@ namespace Cars.Controllers
                         case "GreaterThan":
                             cars = cars.Where(c => c.Year > condition);
                             break;
-                        case "LesserThan":
+                        case "LessThan":
                             cars = cars.Where(c => c.Year < condition);
                             break;
                         default:
@@ -144,7 +145,7 @@ namespace Cars.Controllers
                         case "GreaterThan":
                             cars = cars.Where(c => c.Price > condition);
                             break;
-                        case "LesserThan":
+                        case "LessThan":
                             cars = cars.Where(c => c.Price < condition);
                             break;
                         default:

@@ -1,0 +1,18 @@
+long Compute(int[] arr)
+{
+    long count = 0;
+    for (int i=0; i<arr.Length; i++)
+    {
+        int start = 0, end = arr.Length-1;
+        while (start < end)
+            if (arr[start] < arr[end])
+                { start++; count++; }
+            else 
+                end--;
+    }
+    return count;
+}
+
+Нека примем, че n е дължината на масива (arr.Length).
+Вътрешния цикъл  (n стъпки) се изпълнява n на брой пъти, понеже е затворен в цикъл, който има същия брой стъпки.
+Следователно сложността на алгоритъма е 0(n*n) или 0(n^2);

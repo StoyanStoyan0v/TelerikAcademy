@@ -1,0 +1,17 @@
+long CalcCount(int[,] matrix)
+{
+    long count = 0;
+    for (int row=0; row<matrix.GetLength(0); row++)
+        if (matrix[row, 0] % 2 == 0)
+            for (int col=0; col<matrix.GetLength(1); col++)
+                if (matrix[row,col] > 0)
+                    count++;
+    return count;
+}
+
+Понеже за да се изпълни вътрешния цикъл трябва да е изпълнено условието, може да се разгледат worst и best case:
+Нека приемем, че условието ще бъде изпълнено z пъти.
+
+Worst case: Ако z=n (всяко първо число от реда е четно и отговаря на условието), тогава имаме сложност O(n*m)
+
+Best case: Ako z=0 (всяко първо число от реда е нечетно и неотговаря на условието), тогава имаме сложност O(n)

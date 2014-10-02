@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="SubstringSearcher.Service.SubstringSearcher" CodeBehind="SubstringSearcher.svc.cs" %>

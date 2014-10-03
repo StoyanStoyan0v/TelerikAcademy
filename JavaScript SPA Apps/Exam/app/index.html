@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en" >
+<head>
+  <meta charset="utf-8">
+  <title>Trips Exchange</title>
+  <link rel="stylesheet" href="css/bootstrap.css"/>
+  <link rel="stylesheet" href="css/bootstrap-theme.min.css"/>
+  <link rel="stylesheet" href="css/toastr.min.css"/>
+  <link rel="stylesheet" href="css/app.css"/>
+</head>
+<body ng-app="trips" ng-controller="HomePageController" ng-cloak>
+    <div class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="#/home" class="navbar-brand">TripExchange</a>
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse" id="navbar-main">
+                <ul class="nav navbar-nav">
+                    <li ><a href="#/trips">Trips</a></li>
+                    <li><a href="#/drivers">Drivers</a></li>
+                </ul>
+               <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown " ng-show="identity.isAuthenticated()">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="user">{{identity.getCurrentUser()['userName']}} <span class="caret"></span></a>
+                        <ul class="dropdown-menu" aria-labelledby="user">
+                            <li><a class="text-center" style="cursor: pointer" ng-click="logout()">Log out</a></li>
+                        </ul>
+                    </li>
+               </ul>
+                <ul class="nav navbar-nav navbar-right" ng-hide="identity.isAuthenticated()" >
+                    <li><a href="#/register">Register</a></li>
+                    <li><a href="#/login">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+  <div ng-view>
+  </div>
+
+  <script src="lib/jquery/dist/jquery.min.js"></script>
+  <script src="lib/bootstrap.min.js"></script>
+  <script src="lib/angular/angular.js"></script>
+  <script src="lib/angular/angular-route.js"></script>
+  <script src="lib/angular/angular-resource.min.js"></script>
+  <script src="lib/angular/angular-cookies.min.js"></script>
+  <script src="lib/toastr.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/controllers/loginCtrl.js"></script>
+  <script src="js/controllers/signUpCtrl.js"></script>
+  <script src="js/controllers/homePageController.js"></script>
+  <script src="js/controllers/DriversController.js"></script>
+  <script src="js/controllers/TripsController.js"></script>
+  <script src="js/controllers/CreateTripCtrl.js"></script>
+  <script src="js/controllers/DriverDetailsController.js"></script>
+  <script src="js/services/auth.js"></script>
+  <script src="js/services/notifier.js"></script>
+  <script src="js/services/authorization.js"></script>
+  <script src="js/services/identity.js"></script>
+  <script src="js/services/trips.js"></script>
+  <script src="js/services/drivers.js"></script>
+  <script src="js/services/stats.js"></script>
+  <script src="js/directives/tripsHomeDirective.js"></script>
+</body>
+</html>

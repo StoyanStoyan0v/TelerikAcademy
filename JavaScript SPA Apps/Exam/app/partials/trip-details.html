@@ -1,0 +1,21 @@
+<div ng-controller="TripsController">
+    <div ng-if="identity.isAuthenticated()" >
+    <h2 class="text-center">{{trip.driverName}} - {{trip.departureDate}}</h2>
+        <ul class="nav navbar-nav">
+            <li class="col-md-10">From: <strong>{{trip.from}}</strong></li>
+            <li class="col-md-10">To: <strong>{{trip.to}}</strong></li>
+            <li class="col-md-10">Number of free seats: <strong>{{trip.numberOfFreeSeats}}</strong></li>
+            <ul>Passengers:
+                <li ng-repeat="passenger in trip.passengers">
+                    {{passenger}}
+                </li>
+            </ul>
+        </ul>
+        <button class="btn btn-warning" ng-click="join(trip.id)">Join</button>
+    </div>
+
+    <div ng-if="!identity.isAuthenticated()">
+        <h2 class="text-center"> You are not allowed to use this page.</h2>
+        <h2 class="text-center"> Please, <a href="#/login">log in</a> first</h2>
+    </div>
+</div>

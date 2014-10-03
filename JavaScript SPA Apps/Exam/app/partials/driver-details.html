@@ -1,0 +1,44 @@
+<div ng-controller="DriverDetailsCtrl">
+    <h3>{{driver.name}}</h3>
+    <ul class="nav navbar-nav col-md-12" >
+        <li class="col-md-2"><a>Upcomming trips:<strong>{{driver.numberOfUpcomingTrips}}</strong>  </a></li>
+        <li class="col-md-2"><a>Total trips:<strong> {{driver.numberOfTotalTrips}}</strong>  </a></li>
+        <li class="col-md-3">
+            <input type="checkbox" name="sex" value="mineTrips" ng-model="mine">Only mine trips
+            <input type="checkbox" name="sex" value="driverTrips" ng-model="driver">Only driver trips
+        </li>
+        <li class="col-md-3">
+            <select name="sorting" id="sorting" ng-model="sort">
+                <option value="from">From</option>
+                <option value="to">To</option>
+                <option value="-departureTime">Departure time</option>
+            </select>
+        </li>
+    </ul>
+
+    <div class="col-md-10">
+        <div class="panel panel-default">
+            <div class="panel-heading text-center">Latest Trips</div>
+            <div class="panel-body">
+                <table class="table table-striped table-hover ">
+                    <thead>
+                    <tr>
+                        <th>Driver</th>
+                        <th>From</th>
+                        <th>To</th>
+                        <th>Departure Time</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="trip in driver.trips | orderBy : sort ">
+                        <td><a href="#/driver-details/{{trip.driverId}}">{{trip.driverName}}</a></td>
+                        <td>{{trip.from}}</td>
+                        <td>{{trip.to}}</td>
+                        <td><a href="#/trip-details/{{trip.id}}">{{trip.departureDate}}</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

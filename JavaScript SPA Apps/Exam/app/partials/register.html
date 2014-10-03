@@ -1,0 +1,35 @@
+<div class="col-lg-6" ng-controller="SignUpCtrl">
+    <div class="well bs-component">
+        <form class="form-horizontal" name="registerForm">
+            <fieldset>
+                <legend>Account Registration</legend>
+                <div class="form-group">
+                    <label for="inputEmail" class="col-lg-4 control-label">Email</label>
+                    <div class="col-lg-6">
+                        <input type="text" class="form-control validity" id="inputEmail" placeholder="Email" ng-model="user.email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword" class="col-lg-4 control-label">Password (at least 6 characters)</label>
+                    <div class="col-lg-6">
+                        <input type="password" class="form-control validity" id="inputPassword" placeholder="Password" ng-model="user.password">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword" class="col-lg-4 control-label">Confirm Password</label>
+                    <div class="col-lg-6">
+                        <input type="password" class="form-control validity" id="confirmPassword" placeholder="Confirm Password" ng-model="user.confirmPassword">
+                    </div>
+                </div>
+                <label  class="col-lg-4 control-label">
+                    <input type="checkbox" ng-model="user.isDriver"> Driver
+                </label>
+                <div class="form-group">
+                    <div class="col-lg-2 col-lg-offset-2 text-center">
+                        <button type="submit" class="btn btn-primary" ng-disabled="registerForm.$invalid" ng-click="signup(user,registerForm)">Register</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>

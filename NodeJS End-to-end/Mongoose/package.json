@@ -1,0 +1,11 @@
+{
+  "name": "Mongoose",
+  "version": "0.0.1",
+  "description": "",
+  "main": "app.js",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+      "mongoose": "^3.8.17"
+  }
+}

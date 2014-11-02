@@ -1,0 +1,12 @@
+﻿
+@using SumatorMVC.Models
+<div class="jumbotron">
+    @model AdditionViewModel
+    @using (Html.BeginForm("Addition", "Home", FormMethod.Post))
+    {
+            @Html.EditorFor(x => x.A)
+            @Html.EditorFor(x => x.B)
+            @Html.DisplayFor(x => x.Result)
+            <input type="submit" value="Submit" />
+    }
+</div>

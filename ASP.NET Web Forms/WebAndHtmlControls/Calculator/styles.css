@@ -1,0 +1,12 @@
+﻿#calculator{
+    border:1px double black;
+    width:230px;
+}
+input{
+    margin:5px;
+    padding:3px 13px;
+}
+#Equal{
+    width:200px;
+    margin-left:50px;
+}

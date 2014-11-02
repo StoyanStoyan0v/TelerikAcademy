@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<JustCodeSettings Version="0.0" Timestamp="fd988339-7197-463b-905f-b070cb2d3765">
+  <IgnoredErrorsAndWarningsSettings xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+    <IgnoredErrorsAndWarnings Version="2">
+      <FilePath>
+        <FileRelativePath>LinksMenu/TestMenuListaspx.aspx</FileRelativePath>
+        <ProjectRelativePath>LinksMenu/LinksMenu.csproj</ProjectRelativePath>
+        <IgnoredElement>
+          <TextualIdentifier>7058777018603074411</TextualIdentifier>
+        </IgnoredElement>
+      </FilePath>
+    </IgnoredErrorsAndWarnings>
+  </IgnoredErrorsAndWarningsSettings>
+</JustCodeSettings>
